@@ -1,0 +1,72 @@
+﻿using System;
+
+namespace StageNova.Utilities
+{
+    public static class DynamicContentTranslator
+    {
+        public static class EntitiesTranslation
+        {
+            public static string Username => "Username";
+            public static string UsernameExists => "Such username exists!";
+
+            public static string Password => "Password";
+            public static string ProfilePicture => "Picture is required";
+            public static string ProfileRegistered => "Profile registered successfully!";
+            public static string ProfileUpdatedSuccessfully => "Profile updated successfully!";
+            public static string ProfileUpdateFailed => "Failed to update profile! Please try again!";
+            public static string ProfileDeleteWarning => "Are you sure you want to delete your account? This action cannot be undone!";
+            public static string ProfileDeletionSuccessful => "Your account has been deleted successfully!";
+            public static string ProfileDeletionFailed => "Failed to delete the account! Please try again!";
+
+            public static string EmptyInputData => "Please fill in all input fields!";
+            public static string EmptyOrInvalidImage => "An error occured while processing your image!";
+            public static string InvalidUserCredentials => "Invalid username or password!";
+            public static string PerformanceSoldOut => "The selected performance is sold out!";
+            public static string PerformanceUnavailable => "The selected performance is currently unavailable!";
+            public static string PlayTitleExists => "A play with this title already exists";
+            public static string InvalidPerformanceDate => "Performance date must be in the future!";
+            public static string EmptyReviewMessage => "Please write a review before submitting!";
+
+            public static string ReadMore => "Read more";
+            public static string ItemName => "Name:";
+            public static string ItemDescription => "Description:";
+            public static string WriteReviewPlaceholder => "Write your review here...";
+            public static string WritenOn => "On:";
+            public static string WritenAt => "At:";
+            public static string Update => "Edit";
+            public static string SendReview => "Send";
+
+            public static string BookTicket => "Book Ticket";
+            public static string BookedBy => "Booked by:";
+            public static string Cancel => "Cancel";
+
+            public static string Edit => "Edit";
+            public static string Delete => "Delete";
+            public static string AvailableMessage => "Available";
+            public static string UnavailableMessage => "Unavailable";
+
+            public static string IsAvailableAnswer => "Yes";
+            public static string IsNotAvailableAnswer => "No";
+
+            public static string PlayTitle => "Play:";
+            public static string TicketsCount => "Tickets:";
+            public static string Price => "Total price:";
+            public static string PerformanceDate => "Performance date:";
+            public static string Confirmation => "Confirmation";
+            public static string ConfirmationMessage => "Are you sure you want to cancel your ticket?";
+
+            public static string Genre => "Genre:";
+            public static string Error => "Error";
+            public static string Success => "Success";
+            public static string DeletionSuccessful => "Deletion successful.";
+            public static string DeletionFailed => "Deletion failed.";
+            public static string EditFailed => "Edit Failed";
+            public static string EditSucceeded => "Updated successfully";
+
+            public static string CreateFailed => "Create Failed";
+            public static string CreatedSuccessfully => "Created successfully";
+
+            public static string FieldLength => "{0} should be atleast {1} characters long";
+        }
+    }
+}

@@ -1,0 +1,223 @@
+﻿namespace StageNova.Forms
+{
+    partial class AboutUs
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutUs));
+            lblTitle = new Label();
+            lblDescription = new Label();
+            lblStats = new Label();
+            roundPictureBox1 = new StageNova.Utilities.RoundPictureBox();
+            menu = new MenuStrip();
+            Home = new ToolStripMenuItem();
+            Vehicles = new ToolStripMenuItem();
+            Store = new ToolStripMenuItem();
+            MyReservations = new ToolStripMenuItem();
+            Users = new ToolStripMenuItem();
+            Management = new ToolStripMenuItem();
+            manageProducts = new ToolStripMenuItem();
+            manageVehicles = new ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)roundPictureBox1).BeginInit();
+            menu.SuspendLayout();
+            SuspendLayout();
+            // 
+            // lblTitle
+            // 
+            lblTitle.AutoSize = true;
+            lblTitle.BackColor = Color.Transparent;
+            lblTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            lblTitle.ForeColor = Color.White;
+            lblTitle.Location = new Point(182, 57);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(594, 41);
+            lblTitle.TabIndex = 22;
+            lblTitle.Text = "About StageNova Theater";
+            // 
+            // lblDescription
+            // 
+            lblDescription.AutoSize = true;
+            lblDescription.BackColor = Color.Transparent;
+            lblDescription.Font = new Font("Segoe UI", 10.8F, FontStyle.Italic);
+            lblDescription.ForeColor = Color.White;
+            lblDescription.Location = new Point(233, 132);
+            lblDescription.MaximumSize = new Size(500, 0);
+            lblDescription.Name = "lblDescription";
+            lblDescription.Size = new Size(61, 25);
+            lblDescription.TabIndex = 30;
+            lblDescription.Text = "label1";
+            // 
+            // lblStats
+            // 
+            lblStats.AutoSize = true;
+            lblStats.BackColor = Color.Transparent;
+            lblStats.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            lblStats.ForeColor = Color.White;
+            lblStats.ImeMode = ImeMode.NoControl;
+            lblStats.Location = new Point(233, 489);
+            lblStats.Name = "lblStats";
+            lblStats.Size = new Size(48, 20);
+            lblStats.TabIndex = 31;
+            lblStats.Text = "label1";
+            // 
+            // roundPictureBox1
+            // 
+            roundPictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            roundPictureBox1.ImeMode = ImeMode.NoControl;
+            roundPictureBox1.Location = new Point(893, 0);
+            roundPictureBox1.Name = "roundPictureBox1";
+            roundPictureBox1.Size = new Size(57, 47);
+            roundPictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            roundPictureBox1.TabIndex = 33;
+            roundPictureBox1.TabStop = false;
+            roundPictureBox1.Click += roundPictureBox1_Click;
+            // 
+            // menu
+            // 
+            menu.BackColor = SystemColors.ScrollBar;
+            menu.BackgroundImageLayout = ImageLayout.Stretch;
+            menu.Font = new Font("Verdana", 12F, FontStyle.Bold);
+            menu.ImageScalingSize = new Size(20, 20);
+            menu.Items.AddRange(new ToolStripItem[] { Home, Vehicles, Store, MyReservations, Users, Management });
+            menu.Location = new Point(0, 0);
+            menu.Name = "menu";
+            menu.Padding = new Padding(7, 1, 0, 7);
+            menu.Size = new Size(950, 42);
+            menu.TabIndex = 32;
+            menu.Text = "Menu";
+            // 
+            // Home
+            // 
+            Home.Name = "Home";
+            Home.Size = new Size(91, 34);
+            Home.Text = "Home";
+            Home.Click += menu_ItemClicked;
+            // 
+            // Vehicles
+            // 
+            Vehicles.ForeColor = SystemColors.ActiveCaptionText;
+            Vehicles.Name = "Vehicles";
+            Vehicles.Padding = new Padding(4, 0, 4, 5);
+            Vehicles.Size = new Size(117, 34);
+            Vehicles.Text = "Vehicles";
+            Vehicles.Click += menu_ItemClicked;
+            // 
+            // Store
+            // 
+            Store.ForeColor = SystemColors.ActiveCaptionText;
+            Store.Name = "Store";
+            Store.Padding = new Padding(4, 0, 4, 5);
+            Store.Size = new Size(84, 34);
+            Store.Text = "Store";
+            Store.Click += menu_ItemClicked;
+            // 
+            // MyReservations
+            // 
+            MyReservations.Font = new Font("Verdana", 12F, FontStyle.Bold);
+            MyReservations.ForeColor = SystemColors.ActiveCaptionText;
+            MyReservations.Name = "MyReservations";
+            MyReservations.Padding = new Padding(4, 0, 4, 5);
+            MyReservations.Size = new Size(136, 34);
+            MyReservations.Text = "My orders";
+            MyReservations.Click += menu_ItemClicked;
+            // 
+            // Users
+            // 
+            Users.Font = new Font("Verdana", 12F, FontStyle.Bold);
+            Users.ForeColor = SystemColors.MenuText;
+            Users.Name = "Users";
+            Users.Padding = new Padding(4, 0, 4, 5);
+            Users.Size = new Size(87, 34);
+            Users.Text = "Users";
+            Users.Visible = false;
+            Users.Click += menu_ItemClicked;
+            // 
+            // Management
+            // 
+            Management.DropDownItems.AddRange(new ToolStripItem[] { manageProducts, manageVehicles });
+            Management.Font = new Font("Verdana", 12F, FontStyle.Bold);
+            Management.Name = "Management";
+            Management.Size = new Size(169, 34);
+            Management.Text = "Management";
+            Management.Visible = false;
+            // 
+            // manageProducts
+            // 
+            manageProducts.Name = "manageProducts";
+            manageProducts.Size = new Size(198, 30);
+            manageProducts.Text = "Products";
+            manageProducts.Click += menu_ItemClicked;
+            // 
+            // manageVehicles
+            // 
+            manageVehicles.Name = "manageVehicles";
+            manageVehicles.Size = new Size(198, 30);
+            manageVehicles.Text = "Vehicles";
+            manageVehicles.Click += menu_ItemClicked;
+            // 
+            // AboutUs
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.bg_stagenova;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(950, 600);
+            Controls.Add(roundPictureBox1);
+            Controls.Add(menu);
+            Controls.Add(lblStats);
+            Controls.Add(lblDescription);
+            Controls.Add(lblTitle);
+            DoubleBuffered = true;
+            Icon = Properties.Resources.StageNova_logo1;
+            Margin = new Padding(3, 5, 3, 5);
+            Name = "AboutUs";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "About Us";
+            Load += AboutUs_Load;
+            ((System.ComponentModel.ISupportInitialize)roundPictureBox1).EndInit();
+            menu.ResumeLayout(false);
+            menu.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+        private Label lblTitle;
+        private Label lblDescription;
+        private Label lblStats;
+        private Utilities.RoundPictureBox roundPictureBox1;
+        private MenuStrip menu;
+        private ToolStripMenuItem Home;
+        private ToolStripMenuItem Vehicles;
+        private ToolStripMenuItem Store;
+        private ToolStripMenuItem MyReservations;
+        private ToolStripMenuItem Users;
+        private ToolStripMenuItem Management;
+        private ToolStripMenuItem manageProducts;
+        private ToolStripMenuItem manageVehicles;
+    }
+}
