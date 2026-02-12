@@ -1,4 +1,4 @@
-﻿using StageNova.Extensions;
+using StageNova.Extensions;
 using StageNova.Models;
 using StageNova.Services.Interfaces;
 using StageNova.Utilities;
@@ -15,14 +15,14 @@ using System.Windows.Forms;
 
 namespace StageNova.Forms
 {
-    public partial class Catalog : Form
+    public partial class Plays : Form
     {
         private readonly IPlayService _service;
         private readonly IUserService _userService;
         private readonly ITicketService _ticketService;
         private User activeUser;
 
-        public Catalog()
+        public Plays()
         {
             InitializeComponent();
             _userService = ServiceLocator.GetService<IUserService>();
@@ -30,7 +30,7 @@ namespace StageNova.Forms
             _service = ServiceLocator.GetService<IPlayService>();
             activeUser = _userService.GetLoggedInUserAsync();
         }
-        private void CatalogForm_Load(object sender, EventArgs e)
+        private void Plays_Load(object sender, EventArgs e)
         {
             roundPictureBox1.ImageLocation = activeUser?.AvatarUrl;
             bool isAdmin = AuthorizationHelper.IsAuthorized();
@@ -39,17 +39,16 @@ namespace StageNova.Forms
 
             MenuHelper.ApplyMenuLabels(Home, Vehicles, Store, MyReservations, Users, Management, manageProducts, manageVehicles);
 
-            LoadCatalog();
+            LoadPlays();
         }
 
-        private void LoadCatalog()
+        private void LoadPlays()
         {
             flowPanel.Controls.Clear();
             var plays = _service.GetAllPlays();
 
             foreach (var item in plays)
             {
-                // --- 1. CARD (Panel) ---
                 Panel card = new Panel
                 {
                     Size = new Size(230, 320),
@@ -58,7 +57,6 @@ namespace StageNova.Forms
                     Margin = new Padding(15)
                 };
 
-                // --- 2. IMAGE (RoundPictureBox) ---
                 RoundPictureBox pb = new RoundPictureBox
                 {
                     Size = new Size(210, 160),
@@ -67,7 +65,6 @@ namespace StageNova.Forms
                     BackColor = Color.LightGray
                 };
 
-                // Load poster image from byte array
                 try
                 {
                     if (item.PosterImage != null && item.PosterImage.Length > 0)
@@ -82,7 +79,6 @@ namespace StageNova.Forms
 
                 card.Controls.Add(pb);
 
-                // --- 3. TITLE ---
                 Label lblTitle = new Label
                 {
                     Text = item.Title,
@@ -93,7 +89,6 @@ namespace StageNova.Forms
                 };
                 card.Controls.Add(lblTitle);
 
-                // --- 4. GENRE & DURATION ---
                 Label lblInfo = new Label
                 {
                     Text = $"{item.Genre} | {item.DurationMinutes} min | {item.TicketPrice:F2} BGN",
@@ -103,7 +98,6 @@ namespace StageNova.Forms
                 };
                 card.Controls.Add(lblInfo);
 
-                // --- 5. BOOK TICKET BUTTON ---
                 Button btnBook = new Button
                 {
                     Text = "Book Ticket",
@@ -127,7 +121,7 @@ namespace StageNova.Forms
             var btn = (Button)sender;
             var play = (Play)btn.Tag;
 
-            Program.SwitchMainForm(new BookVisit(_ticketService, play));
+            Program.SwitchMainForm(new BookTicket(_ticketService, play));
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -150,7 +144,7 @@ namespace StageNova.Forms
                     form = new Shop(ServiceLocator.GetService<ISouvenirService>());
                     break;
                 case "Vehicles":
-                    form = new Catalog();
+                    form = new Plays();
                     break;
                 case "MyReservations":
                     form = new Orders(ServiceLocator.GetService<ITicketService>(), ServiceLocator.GetService<ISouvenirService>(), userService);
@@ -162,7 +156,7 @@ namespace StageNova.Forms
                     form = new ManageSouvenirs(ServiceLocator.GetService<ISouvenirService>());
                     break;
                 case "manageVehicles":
-                    form = new ManageExhibits(ServiceLocator.GetService<IPlayService>());
+                    form = new ManagePlays(ServiceLocator.GetService<IPlayService>());
                     break;
                 case "Home":
                     form = new Index(userService);

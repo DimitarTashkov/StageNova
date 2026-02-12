@@ -1,16 +1,9 @@
-﻿namespace StageNova.Forms
+namespace StageNova.Forms
 {
-    partial class Catalog
+    partial class Plays
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,13 +15,8 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Catalog));
             flowPanel = new FlowLayoutPanel();
             btnBack = new Button();
             label1 = new Label();
@@ -177,7 +165,7 @@
             manageVehicles.Text = "Plays";
             manageVehicles.Click += menu_ItemClicked;
             // 
-            // Catalog
+            // Plays
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -191,10 +179,10 @@
             Controls.Add(flowPanel);
             DoubleBuffered = true;
             Icon = Properties.Resources.StageNova_logo1;
-            Name = "Catalog";
+            Name = "Plays";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Catalog";
-            Load += CatalogForm_Load;
+            Text = "Plays";
+            Load += Plays_Load;
             ((System.ComponentModel.ISupportInitialize)roundPictureBox1).EndInit();
             menu.ResumeLayout(false);
             menu.PerformLayout();

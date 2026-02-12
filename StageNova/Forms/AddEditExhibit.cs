@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace StageNova.Forms
 {
-    public partial class AddEditExhibit : Form
+    public partial class AddEditPlay : Form
     {
         private readonly IPlayService _service;
         private Play _play;
@@ -17,7 +17,7 @@ namespace StageNova.Forms
         private readonly IUserService userService;
         private User activeUser;
 
-        public AddEditExhibit(IPlayService playService, Play? play)
+        public AddEditPlay(IPlayService playService, Play? play)
         {
             InitializeComponent();
             _service = playService;
@@ -26,7 +26,7 @@ namespace StageNova.Forms
             activeUser = userService.GetLoggedInUserAsync();
         }
 
-        private void AddEditExhibit_Load(object sender, EventArgs e)
+        private void AddEditPlay_Load(object sender, EventArgs e)
         {
             SetupUI();
             bool isAdmin = AuthorizationHelper.IsAuthorized();
@@ -239,7 +239,7 @@ namespace StageNova.Forms
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            Program.SwitchMainForm(new ManageExhibits(_service));
+            Program.SwitchMainForm(new ManagePlays(_service));
         }
 
         private void roundPictureBox1_Click(object sender, EventArgs e)
@@ -263,7 +263,7 @@ namespace StageNova.Forms
                     form = new Shop(ServiceLocator.GetService<ISouvenirService>());
                     break;
                 case "Vehicles":
-                    form = new Catalog();
+                    form = new Plays();
                     break;
                 case "MyReservations":
                     form = new Orders(ServiceLocator.GetService<ITicketService>(), ServiceLocator.GetService<ISouvenirService>(), userService);
@@ -275,7 +275,7 @@ namespace StageNova.Forms
                     form = new ManageSouvenirs(ServiceLocator.GetService<ISouvenirService>());
                     break;
                 case "manageVehicles":
-                    form = new ManageExhibits(ServiceLocator.GetService<IPlayService>());
+                    form = new ManagePlays(ServiceLocator.GetService<IPlayService>());
                     break;
                 case "Home":
                     form = new Index(userService);

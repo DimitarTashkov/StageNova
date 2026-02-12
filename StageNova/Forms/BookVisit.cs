@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace StageNova.Forms
 {
-    public partial class BookVisit : Form
+    public partial class BookTicket : Form
     {
         private readonly ITicketService _ticketService;
         private readonly Play _selectedPlay;
@@ -18,7 +18,7 @@ namespace StageNova.Forms
         private User? currrentUser;
         private List<Performance> _performances;
 
-        public BookVisit(ITicketService ticketService, Play play)
+        public BookTicket(ITicketService ticketService, Play play)
         {
             InitializeComponent();
             _ticketService = ticketService;
@@ -27,7 +27,7 @@ namespace StageNova.Forms
             currrentUser = userService.GetLoggedInUserAsync();
         }
 
-        private void BookVisit_Load(object sender, EventArgs e)
+        private void BookTicket_Load(object sender, EventArgs e)
         {
             // Load poster image from byte array
             if (_selectedPlay.PosterImage != null && _selectedPlay.PosterImage.Length > 0)
@@ -152,7 +152,7 @@ namespace StageNova.Forms
                     $"Total: {total:F2} BGN",
                     "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                Program.SwitchMainForm(new Catalog());
+                Program.SwitchMainForm(new Plays());
             }
             catch (Exception ex)
             {
@@ -162,7 +162,7 @@ namespace StageNova.Forms
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            Program.SwitchMainForm(new Catalog());
+            Program.SwitchMainForm(new Plays());
         }
 
         private void menu_ItemClicked(object sender, EventArgs e)
@@ -180,7 +180,7 @@ namespace StageNova.Forms
                     form = new Shop(ServiceLocator.GetService<ISouvenirService>());
                     break;
                 case "Vehicles":
-                    form = new Catalog();
+                    form = new Plays();
                     break;
                 case "MyReservations":
                     form = new Orders(ServiceLocator.GetService<ITicketService>(), ServiceLocator.GetService<ISouvenirService>(), userService);
@@ -192,7 +192,7 @@ namespace StageNova.Forms
                     form = new ManageSouvenirs(ServiceLocator.GetService<ISouvenirService>());
                     break;
                 case "manageVehicles":
-                    form = new ManageExhibits(ServiceLocator.GetService<IPlayService>());
+                    form = new ManagePlays(ServiceLocator.GetService<IPlayService>());
                     break;
                 case "Home":
                     form = new Index(userService);

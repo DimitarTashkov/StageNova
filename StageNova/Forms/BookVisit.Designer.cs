@@ -1,6 +1,6 @@
 ﻿namespace StageNova.Forms
 {
-    partial class BookVisit
+    partial class BookTicket
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookVisit));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookTicket));
             lblTitle = new Label();
             lblPlayInfo = new Label();
             cmbPerformance = new ComboBox();
@@ -273,7 +273,7 @@
             manageVehicles.Text = "Plays";
             manageVehicles.Click += menu_ItemClicked;
             // 
-            // BookVisit
+            // BookTicket
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -294,10 +294,10 @@
             Controls.Add(lblTitle);
             DoubleBuffered = true;
             Icon = Properties.Resources.StageNova_logo1;
-            Name = "BookVisit";
+            Name = "BookTicket";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Book Theater Ticket";
-            Load += BookVisit_Load;
+            Load += BookTicket_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)roundPictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudTicketCount).EndInit();

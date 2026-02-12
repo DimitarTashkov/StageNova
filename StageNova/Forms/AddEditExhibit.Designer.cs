@@ -1,6 +1,6 @@
 ﻿namespace StageNova.Forms
 {
-    partial class AddEditExhibit
+    partial class AddEditPlay
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEditExhibit));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEditPlay));
             btnBack = new Button();
             btnSave = new Button();
             pictureBox1 = new PictureBox();
@@ -436,7 +436,7 @@
             manageVehicles.Text = "Plays";
             manageVehicles.Click += menu_ItemClicked;
             // 
-            // AddEditExhibit
+            // AddEditPlay
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -465,10 +465,10 @@
             Controls.Add(label1);
             DoubleBuffered = true;
             Icon = Properties.Resources.StageNova_logo1;
-            Name = "AddEditExhibit";
+            Name = "AddEditPlay";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Add / Edit Play";
-            Load += AddEditExhibit_Load;
+            Load += AddEditPlay_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)numYear).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudTotalSeats).EndInit();

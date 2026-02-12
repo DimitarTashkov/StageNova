@@ -14,12 +14,12 @@ using System.Windows.Forms;
 
 namespace StageNova.Forms
 {
-    public partial class ManageExhibits : Form
+    public partial class ManagePlays : Form
     {
         private readonly IPlayService _service;
         private readonly IUserService _userService;
         private User? activeUser;
-        public ManageExhibits(IPlayService service)
+        public ManagePlays(IPlayService service)
         {
             InitializeComponent();
             this._service = service;
@@ -27,7 +27,7 @@ namespace StageNova.Forms
             activeUser = _userService.GetLoggedInUserAsync();
         }
 
-        private void ManageExhibits_Load(object sender, EventArgs e)
+        private void ManagePlays_Load(object sender, EventArgs e)
         {
             btnAdd.BackColor = Color.FromArgb(120, 27, 51);
             btnAdd.ForeColor = Color.White;
@@ -85,13 +85,13 @@ namespace StageNova.Forms
             }
             else if (dgvExhibits.Columns[e.ColumnIndex].Name == "Edit")
             {
-                Program.SwitchMainForm(new AddEditExhibit(_service, play));
+                Program.SwitchMainForm(new AddEditPlay(_service, play));
             }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Program.SwitchMainForm(new AddEditExhibit(_service, null));
+            Program.SwitchMainForm(new AddEditPlay(_service, null));
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -114,7 +114,7 @@ namespace StageNova.Forms
                     form = new Shop(ServiceLocator.GetService<ISouvenirService>());
                     break;
                 case "Vehicles":
-                    form = new Catalog();
+                    form = new Plays();
                     break;
                 case "MyReservations":
                     form = new Orders(ServiceLocator.GetService<ITicketService>(), ServiceLocator.GetService<ISouvenirService>(), userService);
@@ -126,7 +126,7 @@ namespace StageNova.Forms
                     form = new ManageSouvenirs(ServiceLocator.GetService<ISouvenirService>());
                     break;
                 case "manageVehicles":
-                    form = new ManageExhibits(ServiceLocator.GetService<IPlayService>());
+                    form = new ManagePlays(ServiceLocator.GetService<IPlayService>());
                     break;
                 case "Home":
                     form = new Index(userService);

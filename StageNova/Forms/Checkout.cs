@@ -87,7 +87,7 @@ namespace StageNova.Forms
                     form = new Shop(ServiceLocator.GetService<ISouvenirService>());
                     break;
                 case "Vehicles":
-                    form = new Catalog();
+                    form = new Plays();
                     break;
                 case "MyReservations":
                     form = new Orders(ServiceLocator.GetService<ITicketService>(), ServiceLocator.GetService<ISouvenirService>(), userService);
@@ -99,7 +99,7 @@ namespace StageNova.Forms
                     form = new ManageSouvenirs(ServiceLocator.GetService<ISouvenirService>());
                     break;
                 case "manageVehicles":
-                    form = new ManageExhibits(ServiceLocator.GetService<IPlayService>());
+                    form = new ManagePlays(ServiceLocator.GetService<IPlayService>());
                     break;
                 case "Home":
                     form = new Index(userService);

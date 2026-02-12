@@ -1,6 +1,6 @@
 ﻿namespace StageNova.Forms
 {
-    partial class ManageExhibits
+    partial class ManagePlays
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageExhibits));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagePlays));
             dgvExhibits = new DataGridView();
             btnAdd = new Button();
             btnBack = new Button();
@@ -178,7 +178,7 @@
             manageVehicles.Text = "Plays";
             manageVehicles.Click += menu_ItemClicked;
             // 
-            // ManageExhibits
+            // ManagePlays
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -192,10 +192,10 @@
             Controls.Add(dgvExhibits);
             DoubleBuffered = true;
             Icon = Properties.Resources.StageNova_logo1;
-            Name = "ManageExhibits";
+            Name = "ManagePlays";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Manage Plays";
-            Load += ManageExhibits_Load;
+            Load += ManagePlays_Load;
             ((System.ComponentModel.ISupportInitialize)dgvExhibits).EndInit();
             ((System.ComponentModel.ISupportInitialize)roundPictureBox1).EndInit();
             menu.ResumeLayout(false);

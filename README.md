@@ -54,12 +54,12 @@ StageNova/
 ?   ??? Index                # Home page
 ?   ??? Login / Register     # Authentication
 ?   ??? Profile              # User profile management
-?   ??? Catalog              # Play repertoire browser
-?   ??? BookVisit            # Ticket booking
+?   ??? Plays                # Play repertoire browser
+?   ??? BookTicket           # Ticket booking
 ?   ??? Shop / Checkout      # Merchandise store
 ?   ??? Orders               # My Bookings view
-?   ??? ManageExhibits       # Admin: manage plays
-?   ??? AddEditExhibit       # Admin: add/edit play + performances
+?   ??? ManagePlays          # Admin: manage plays
+?   ??? AddEditPlay          # Admin: add/edit play + performances
 ?   ??? ManageSouvenirs      # Admin: manage merchandise
 ?   ??? AddEditSouvenir      # Admin: add/edit merchandise
 ?   ??? Users                # Admin: user management
