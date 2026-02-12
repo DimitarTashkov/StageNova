@@ -17,87 +17,29 @@
 
 ---
 
-## ?? Overview
+## Overview
 
 **StageNova** is a desktop theater management application that allows users to browse a repertoire of plays, book tickets for performances, purchase theater merchandise, and manage their bookings. Administrators can manage plays, performances, merchandise inventory, and user accounts.
 
 ---
 
-## ? Features
+## Features
 
-### ??? For Theatergoers
-- **Browse Repertoire** — Explore plays with poster art, genre, duration, and ticket pricing
-- **Book Tickets** — Select a performance date/time, choose seat count, and see live total pricing
-- **My Bookings** — View all ticket bookings and merchandise orders with cancellation support
-- **Merchandise Shop** — Purchase theater merchandise with image previews and stock availability
-- **Profile Management** — Edit username, password, email, age, and avatar
+### For Theatergoers
+- **Browse Repertoire** â€” Explore plays with poster art, genre, duration, and ticket pricing
+- **Book Tickets** â€” Select a performance date/time, choose seat count, and see live total pricing
+- **My Bookings** â€” View all ticket bookings and merchandise orders with cancellation support
+- **Merchandise Shop** â€” Purchase theater merchandise with image previews and stock availability
+- **Profile Management** â€” Edit username, password, email, age, and avatar
 
-### ?? For Administrators
-- **Manage Plays** — Full CRUD for plays including title, director, genre, duration, ticket price, poster image, and description
-- **Manage Performances** — Add/remove show dates with seat capacity per play
-- **Manage Merchandise** — Add, edit, and delete merchandise items with pricing, stock, and images
-- **User Management** — View all registered users and toggle admin roles
-
----
-
-## ??? Architecture
-
-```
-StageNova/
-??? Common/                  # Constants, validation rules, fonts
-?   ??? Constants/           # ValidationConstants, FontsPicker
-?   ??? Messages/            # ErrorMessages
-??? DTOs/                    # Data Transfer Objects
-?   ??? User/                # LoginUserInputModel, RegisterUserInputModel, EditProfileInputModel
-??? Extensions/              # ServiceLocator, ServiceRegistration (DI)
-??? Forms/                   # WinForms UI (16 forms)
-?   ??? Index                # Home page
-?   ??? Login / Register     # Authentication
-?   ??? Profile              # User profile management
-?   ??? Catalog              # Play repertoire browser
-?   ??? BookVisit            # Ticket booking
-?   ??? Shop / Checkout      # Merchandise store
-?   ??? Orders               # My Bookings view
-?   ??? ManageExhibits       # Admin: manage plays
-?   ??? AddEditExhibit       # Admin: add/edit play + performances
-?   ??? ManageSouvenirs      # Admin: manage merchandise
-?   ??? AddEditSouvenir      # Admin: add/edit merchandise
-?   ??? Users                # Admin: user management
-?   ??? AboutUs / ContactUs  # Info pages
-?   ??? ...Designer.cs       # Auto-generated designer files
-??? Models/                  # EF Core entities
-?   ??? Play, Performance, Ticket
-?   ??? User, Role, UserRole
-?   ??? Souvenir, Order, OrderItem
-?   ??? DbConfiguration/    # StageNovaDbContext, Configuration, SeedAdmin
-??? Services/                # Business logic layer
-?   ??? Interfaces/          # IPlayService, ITicketService, IUserService, ISouvenirService
-?   ??? PlayService, TicketService, UserService, SouvenirService
-?   ??? BaseService          # Shared validation logic
-??? Utilities/               # Helpers
-?   ??? MenuHelper           # Centralized navigation labels & styling
-?   ??? AuthorizationHelper  # Admin role checks
-?   ??? InvoiceHelper        # Receipt/invoice generation
-?   ??? ValidationHelper     # Input validation
-?   ??? EventsEffects        # UI hover/click effects
-?   ??? LayoutHelper         # Gradient backgrounds
-?   ??? RoundPictureBox      # Custom circular PictureBox control
-?   ??? DynamicContentTranslator  # UI string constants
-??? Migrations/              # EF Core migrations
-??? Properties/              # Embedded resources (images, icons)
-??? Program.cs               # Entry point with DI setup
-```
+### For Administrators
+- **Manage Plays** â€” Full CRUD for plays including title, director, genre, duration, ticket price, poster image, and description
+- **Manage Performances** â€” Add/remove show dates with seat capacity per play
+- **Manage Merchandise** â€” Add, edit, and delete merchandise items with pricing, stock, and images
+- **User Management** â€” View all registered users and toggle admin roles
 
 ---
 
-## ??? Data Model
-
-```
-User ????? Ticket ???? Performance ???? Play
-       ??? Order ???? OrderItem ???? Souvenir
-
-User ???? UserRole ???? Role
-```
 
 | Entity | Key Fields |
 |---|---|
@@ -112,7 +54,7 @@ User ???? UserRole ???? Role
 
 ---
 
-## ?? Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -168,21 +110,10 @@ An admin user is automatically seeded on first launch:
 | Password | `admin123` |
 | Email | `admin@stagenova.com` |
 
----
-
-## ??? Screenshots
-
-| Login | Home | Repertoire |
-|:---:|:---:|:---:|
-| Authentication screen with theater branding | Dashboard with navigation to repertoire and merchandise | Browse plays with poster cards |
-
-| Book Tickets | Merchandise | My Bookings |
-|:---:|:---:|:---:|
-| Select performance, choose seats, live pricing | Browse and purchase theater merchandise | View tickets and merchandise orders |
 
 ---
 
-## ??? Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -194,12 +125,12 @@ An admin user is automatically seeded on first launch:
 
 ---
 
-## ?? License
+## License
 
 This project is developed for educational purposes.
 
 ---
 
 <p align="center">
-  <em>?? StageNova — Where stories come alive on stage.</em>
+  <em>?? StageNova â€” Where stories come alive on stage.</em>
 </p>
