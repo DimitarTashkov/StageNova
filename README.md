@@ -2,7 +2,7 @@
   <img src="StageNova/Resources/StageNova_logo.png" alt="StageNova Logo" width="180" />
 </p>
 
-<h1 align="center">?? StageNova</h1>
+<h1 align="center"> StageNova</h1>
 
 <p align="center">
   <strong>A Theater Management System built with .NET 8 and Windows Forms</strong>
@@ -132,5 +132,5 @@ This project is developed for educational purposes.
 ---
 
 <p align="center">
-  <em>?? StageNova — Where stories come alive on stage.</em>
+  <em> StageNova — Where stories come alive on stage.</em>
 </p>
