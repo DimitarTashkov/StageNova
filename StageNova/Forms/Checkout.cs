@@ -62,8 +62,6 @@ namespace StageNova.Forms
             bool isAdmin = AuthorizationHelper.IsAuthorized();
             Users.Visible = isAdmin;
             Management.Visible = isAdmin;
-
-            MenuHelper.ApplyMenuLabels(Home, Vehicles, Store, MyReservations, Users, Management, manageProducts, manageVehicles);
         }
 
         private void roundPictureBox1_Click(object sender, EventArgs e)

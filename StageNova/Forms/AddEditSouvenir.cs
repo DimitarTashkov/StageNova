@@ -35,8 +35,6 @@ namespace StageNova.Forms
             Users.Visible = isAdmin;
             Management.Visible = isAdmin;
             roundPictureBox1.ImageLocation = activeUser?.AvatarUrl;
-
-            MenuHelper.ApplyMenuLabels(Home, Vehicles, Store, MyReservations, Users, Management, manageProducts, manageVehicles);
         }
         private void SetupUI()
         {

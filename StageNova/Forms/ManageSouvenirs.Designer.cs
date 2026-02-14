@@ -49,6 +49,7 @@
             // 
             // btnAdd
             // 
+            btnAdd.BackColor = Color.FromArgb(120, 27, 51);
             btnAdd.ForeColor = Color.White;
             btnAdd.Location = new Point(768, 53);
             btnAdd.Name = "btnAdd";
@@ -97,9 +98,8 @@
             // 
             // menu
             // 
-            menu.BackColor = SystemColors.ScrollBar;
-            menu.BackgroundImageLayout = ImageLayout.Stretch;
-            menu.Font = new Font("Verdana", 12F, FontStyle.Bold);
+            menu.BackColor = Color.FromArgb(30, 15, 30);
+            menu.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             menu.ImageScalingSize = new Size(20, 20);
             menu.Items.AddRange(new ToolStripItem[] { Home, Vehicles, Store, MyReservations, Users, Management });
             menu.Location = new Point(0, 0);
@@ -111,6 +111,7 @@
             // 
             // Home
             // 
+            Home.ForeColor = Color.FromArgb(225, 200, 160);
             Home.Name = "Home";
             Home.Size = new Size(91, 34);
             Home.Text = "Home";
@@ -118,36 +119,35 @@
             // 
             // Vehicles
             // 
-            Vehicles.ForeColor = SystemColors.ActiveCaptionText;
+            Vehicles.ForeColor = Color.FromArgb(225, 200, 160);
             Vehicles.Name = "Vehicles";
             Vehicles.Padding = new Padding(4, 0, 4, 5);
             Vehicles.Size = new Size(117, 34);
-            Vehicles.Text = "Vehicles";
+            Vehicles.Text = "Repertoire";
             Vehicles.Click += menu_ItemClicked;
             // 
             // Store
             // 
-            Store.ForeColor = SystemColors.ActiveCaptionText;
+            Store.ForeColor = Color.FromArgb(225, 200, 160);
             Store.Name = "Store";
             Store.Padding = new Padding(4, 0, 4, 5);
             Store.Size = new Size(84, 34);
-            Store.Text = "Store";
+            Store.Text = "Merchandise";
             Store.Click += menu_ItemClicked;
             // 
             // MyReservations
             // 
             MyReservations.Font = new Font("Verdana", 12F, FontStyle.Bold);
-            MyReservations.ForeColor = SystemColors.ActiveCaptionText;
+            MyReservations.ForeColor = Color.FromArgb(225, 200, 160);
             MyReservations.Name = "MyReservations";
             MyReservations.Padding = new Padding(4, 0, 4, 5);
             MyReservations.Size = new Size(136, 34);
-            MyReservations.Text = "My orders";
+            MyReservations.Text = "My Bookings";
             MyReservations.Click += menu_ItemClicked;
             // 
             // Users
             // 
-            Users.Font = new Font("Verdana", 12F, FontStyle.Bold);
-            Users.ForeColor = SystemColors.MenuText;
+            Users.ForeColor = Color.FromArgb(225, 200, 160);
             Users.Name = "Users";
             Users.Padding = new Padding(4, 0, 4, 5);
             Users.Size = new Size(87, 34);
@@ -158,7 +158,7 @@
             // Management
             // 
             Management.DropDownItems.AddRange(new ToolStripItem[] { manageProducts, manageVehicles });
-            Management.Font = new Font("Verdana", 12F, FontStyle.Bold);
+            Management.ForeColor = Color.FromArgb(225, 200, 160);
             Management.Name = "Management";
             Management.Size = new Size(169, 34);
             Management.Text = "Management";
@@ -166,16 +166,20 @@
             // 
             // manageProducts
             // 
+            manageProducts.BackColor = Color.FromArgb(30, 15, 30);
+            manageProducts.ForeColor = Color.FromArgb(225, 200, 160);
             manageProducts.Name = "manageProducts";
             manageProducts.Size = new Size(198, 30);
-            manageProducts.Text = "Products";
+            manageProducts.Text = "Merchandise";
             manageProducts.Click += menu_ItemClicked;
             // 
             // manageVehicles
             // 
+            manageVehicles.BackColor = Color.FromArgb(30, 15, 30);
+            manageVehicles.ForeColor = Color.FromArgb(225, 200, 160);
             manageVehicles.Name = "manageVehicles";
             manageVehicles.Size = new Size(198, 30);
-            manageVehicles.Text = "Vehicles";
+            manageVehicles.Text = "Plays";
             manageVehicles.Click += menu_ItemClicked;
             // 
             // ManageSouvenirs

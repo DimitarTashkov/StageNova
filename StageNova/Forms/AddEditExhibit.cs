@@ -34,8 +34,6 @@ namespace StageNova.Forms
             Management.Visible = isAdmin;
             roundPictureBox1.ImageLocation = activeUser?.AvatarUrl;
 
-            MenuHelper.ApplyMenuLabels(Home, Vehicles, Store, MyReservations, Users, Management, manageProducts, manageVehicles);
-
             SetupPerformanceGrid();
         }
 

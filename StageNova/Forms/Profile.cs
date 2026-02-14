@@ -107,8 +107,6 @@ namespace StageNova.Forms
                 Management.Visible = true;
             }
 
-            MenuHelper.ApplyMenuLabels(Home, Vehicles, Store, MyReservations, Users, Management, manageProducts, manageVehicles);
-
             roundPictureBox1.ImageLocation = activeUser.AvatarUrl;
 
             usernameField.Text = activeUser.Username;

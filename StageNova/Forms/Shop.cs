@@ -38,8 +38,6 @@ namespace StageNova.Forms
             Users.Visible = isAdmin;
             Management.Visible = isAdmin;
 
-            MenuHelper.ApplyMenuLabels(Home, Vehicles, Store, MyReservations, Users, Management, manageProducts, manageVehicles);
-
             LoadShop();
         }
         private void LoadShop()

@@ -27,8 +27,6 @@ namespace StageNova.Forms
         }
         private void ManageSouvenirs_Load(object sender, EventArgs e)
         {
-            btnAdd.BackColor = Color.FromArgb(120, 27, 51);
-            btnAdd.ForeColor = Color.White;
             SetupGrid();
             LoadData();
 
@@ -36,8 +34,6 @@ namespace StageNova.Forms
             Users.Visible = isAdmin;
             Management.Visible = isAdmin;
             roundPictureBox1.ImageLocation = activeUser?.AvatarUrl;
-
-            MenuHelper.ApplyMenuLabels(Home, Vehicles, Store, MyReservations, Users, Management, manageProducts, manageVehicles);
         }
 
         private void SetupGrid()

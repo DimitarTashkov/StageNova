@@ -55,9 +55,11 @@
             // 
             // footer
             // 
-            footer.BackColor = Color.Transparent;
-            footer.BackgroundImageLayout = ImageLayout.Stretch;
-            footer.Font = new Font("Verdana", 11.25F, FontStyle.Italic);
+            footer.BackColor = Color.FromArgb(120, 27, 51);
+            footer.ForeColor = Color.White;
+            footer.FlatStyle = FlatStyle.Flat;
+            footer.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            footer.Cursor = Cursors.Hand;
             footer.Location = new Point(0, 545);
             footer.Margin = new Padding(3, 4, 3, 4);
             footer.Name = "footer";
@@ -68,9 +70,11 @@
             // 
             // storeButton
             // 
-            storeButton.BackColor = SystemColors.ButtonFace;
-            storeButton.BackgroundImageLayout = ImageLayout.Stretch;
-            storeButton.Font = new Font("Verdana", 12F, FontStyle.Bold | FontStyle.Italic);
+            storeButton.BackColor = Color.FromArgb(120, 27, 51);
+            storeButton.ForeColor = Color.White;
+            storeButton.FlatStyle = FlatStyle.Flat;
+            storeButton.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            storeButton.Cursor = Cursors.Hand;
             storeButton.Location = new Point(605, 437);
             storeButton.Margin = new Padding(3, 4, 3, 4);
             storeButton.Name = "storeButton";
@@ -82,9 +86,11 @@
             // 
             // exhibitionsButton
             // 
-            exhibitionsButton.BackColor = SystemColors.ButtonFace;
-            exhibitionsButton.BackgroundImageLayout = ImageLayout.Stretch;
-            exhibitionsButton.Font = new Font("Verdana", 12F, FontStyle.Bold | FontStyle.Italic);
+            exhibitionsButton.BackColor = Color.FromArgb(120, 27, 51);
+            exhibitionsButton.ForeColor = Color.White;
+            exhibitionsButton.FlatStyle = FlatStyle.Flat;
+            exhibitionsButton.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            exhibitionsButton.Cursor = Cursors.Hand;
             exhibitionsButton.Location = new Point(95, 436);
             exhibitionsButton.Margin = new Padding(3, 4, 3, 4);
             exhibitionsButton.Name = "exhibitionsButton";
@@ -116,9 +122,8 @@
             // 
             // menu
             // 
-            menu.BackColor = SystemColors.ScrollBar;
-            menu.BackgroundImageLayout = ImageLayout.Stretch;
-            menu.Font = new Font("Verdana", 12F, FontStyle.Bold);
+            menu.BackColor = Color.FromArgb(30, 15, 30);
+            menu.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             menu.ImageScalingSize = new Size(20, 20);
             menu.Items.AddRange(new ToolStripItem[] { Home, Vehicles, Store, MyReservations, Users, Management });
             menu.Location = new Point(0, 0);
@@ -130,6 +135,7 @@
             // 
             // Home
             // 
+            Home.ForeColor = Color.FromArgb(225, 200, 160);
             Home.Name = "Home";
             Home.Size = new Size(91, 34);
             Home.Text = "Home";
@@ -137,36 +143,34 @@
             // 
             // Vehicles
             // 
-            Vehicles.ForeColor = SystemColors.ActiveCaptionText;
+            Vehicles.ForeColor = Color.FromArgb(225, 200, 160);
             Vehicles.Name = "Vehicles";
             Vehicles.Padding = new Padding(4, 0, 4, 5);
             Vehicles.Size = new Size(117, 34);
-            Vehicles.Text = "Vehicles";
+            Vehicles.Text = "Repertoire";
             Vehicles.Click += menu_ItemClicked;
             // 
             // Store
             // 
-            Store.ForeColor = SystemColors.ActiveCaptionText;
+            Store.ForeColor = Color.FromArgb(225, 200, 160);
             Store.Name = "Store";
             Store.Padding = new Padding(4, 0, 4, 5);
             Store.Size = new Size(84, 34);
-            Store.Text = "Store";
+            Store.Text = "Merchandise";
             Store.Click += menu_ItemClicked;
             // 
             // MyReservations
             // 
-            MyReservations.Font = new Font("Verdana", 12F, FontStyle.Bold);
-            MyReservations.ForeColor = SystemColors.ActiveCaptionText;
+            MyReservations.ForeColor = Color.FromArgb(225, 200, 160);
             MyReservations.Name = "MyReservations";
             MyReservations.Padding = new Padding(4, 0, 4, 5);
             MyReservations.Size = new Size(136, 34);
-            MyReservations.Text = "My orders";
+            MyReservations.Text = "My Bookings";
             MyReservations.Click += menu_ItemClicked;
             // 
             // Users
             // 
-            Users.Font = new Font("Verdana", 12F, FontStyle.Bold);
-            Users.ForeColor = SystemColors.MenuText;
+            Users.ForeColor = Color.FromArgb(225, 200, 160);
             Users.Name = "Users";
             Users.Padding = new Padding(4, 0, 4, 5);
             Users.Size = new Size(87, 34);
@@ -177,7 +181,7 @@
             // Management
             // 
             Management.DropDownItems.AddRange(new ToolStripItem[] { manageProducts, manageVehicles });
-            Management.Font = new Font("Verdana", 12F, FontStyle.Bold);
+            Management.ForeColor = Color.FromArgb(225, 200, 160);
             Management.Name = "Management";
             Management.Size = new Size(169, 34);
             Management.Text = "Management";
@@ -185,24 +189,30 @@
             // 
             // manageProducts
             // 
+            manageProducts.BackColor = Color.FromArgb(30, 15, 30);
+            manageProducts.ForeColor = Color.FromArgb(225, 200, 160);
             manageProducts.Name = "manageProducts";
             manageProducts.Size = new Size(198, 30);
-            manageProducts.Text = "Products";
+            manageProducts.Text = "Merchandise";
             manageProducts.Click += menu_ItemClicked;
             // 
             // manageVehicles
             // 
+            manageVehicles.BackColor = Color.FromArgb(30, 15, 30);
+            manageVehicles.ForeColor = Color.FromArgb(225, 200, 160);
             manageVehicles.Name = "manageVehicles";
             manageVehicles.Size = new Size(198, 30);
-            manageVehicles.Text = "Vehicles";
+            manageVehicles.Text = "Plays";
             manageVehicles.Click += menu_ItemClicked;
             // 
             // aboutUs
             // 
             aboutUs.AutoSize = true;
             aboutUs.BackColor = Color.Transparent;
-            aboutUs.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
+            aboutUs.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             aboutUs.ForeColor = Color.White;
+            aboutUs.Cursor = Cursors.Hand;
+            aboutUs.TextAlign = ContentAlignment.MiddleCenter;
             aboutUs.Location = new Point(160, 556);
             aboutUs.Name = "aboutUs";
             aboutUs.Size = new Size(93, 25);
@@ -214,9 +224,10 @@
             // 
             contactUs.AutoSize = true;
             contactUs.BackColor = Color.Transparent;
-            contactUs.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
+            contactUs.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             contactUs.ForeColor = Color.White;
-            contactUs.ImeMode = ImeMode.NoControl;
+            contactUs.Cursor = Cursors.Hand;
+            contactUs.TextAlign = ContentAlignment.MiddleCenter;
             contactUs.Location = new Point(704, 556);
             contactUs.Name = "contactUs";
             contactUs.Size = new Size(106, 25);
@@ -229,6 +240,7 @@
             welcomeMessage.BackColor = Color.Transparent;
             welcomeMessage.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
             welcomeMessage.ForeColor = Color.White;
+            welcomeMessage.TextAlign = ContentAlignment.MiddleCenter;
             welcomeMessage.Location = new Point(28, 70);
             welcomeMessage.Name = "welcomeMessage";
             welcomeMessage.Size = new Size(856, 41);

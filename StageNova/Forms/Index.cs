@@ -26,7 +26,6 @@ namespace StageNova.Forms
             activeUser = userService.GetLoggedInUserAsync();
 
             InitializeComponent();
-            ApplyCustomStyles();
         }
 
         private void Index_Load(object sender, EventArgs e)
@@ -36,10 +35,6 @@ namespace StageNova.Forms
             bool isAdmin = AuthorizationHelper.IsAuthorized();
             Users.Visible = isAdmin;
             Management.Visible = isAdmin;
-
-            MenuHelper.ApplyMenuLabels(Home, Vehicles, Store, MyReservations, Users, Management, manageProducts, manageVehicles);
-
-            ApplyCustomStyles();
         }
 
         private void roundPictureBox1_Click(object sender, EventArgs e)
@@ -89,32 +84,6 @@ namespace StageNova.Forms
             }
 
             Program.SwitchMainForm(form);
-        }
-
-        private void ApplyCustomStyles()
-        {
-            foreach (Control ctrl in this.Controls)
-            {
-                if (ctrl is Button btn)
-                {
-                    btn.BackColor = Color.FromArgb(120, 27, 51);
-                    btn.ForeColor = Color.White;
-                    btn.FlatStyle = FlatStyle.Flat;
-                    btn.Font = new Font("Segoe UI", 11, FontStyle.Bold);
-                    btn.FlatAppearance.BorderSize = 0;
-                    btn.Cursor = Cursors.Hand;
-                    btn.MouseEnter += (s, e) => btn.BackColor = Color.FromArgb(155, 40, 70);
-                    btn.MouseLeave += (s, e) => btn.BackColor = Color.FromArgb(120, 27, 51);
-                }
-                else if (ctrl is Label lbl)
-                {
-                    lbl.BackColor = Color.Transparent;
-                    lbl.ForeColor = Color.White;
-                    lbl.Cursor = Cursors.Hand;
-                    lbl.Font = new Font("Segoe UI", 11, FontStyle.Bold);
-                    lbl.TextAlign = ContentAlignment.MiddleCenter;
-                }
-            }
         }
 
         private void aboutUs_Click(object sender, EventArgs e)

@@ -28,8 +28,6 @@ namespace StageNova.Forms
             User.Visible = isAdmin;
             Management.Visible = isAdmin;
 
-            MenuHelper.ApplyMenuLabels(Home, Vehicles, Store, MyReservations, User, Management, manageProducts, manageVehicles);
-
             roundPictureBox1.ImageLocation = activeUser.AvatarUrl;
 
             var users = await userService.GetUsersAsync();
