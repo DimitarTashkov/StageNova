@@ -132,81 +132,84 @@
             // 
             // menu
             // 
+            resources.ApplyResources(menu, "menu");
             menu.BackColor = Color.FromArgb(30, 15, 30);
             menu.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            resources.ApplyResources(menu, "menu");
             menu.ImageScalingSize = new Size(20, 20);
             menu.Items.AddRange(new ToolStripItem[] { Home, Vehicles, Store, MyReservations, User, Management });
             menu.Name = "menu";
             // 
             // Home
             // 
+            resources.ApplyResources(Home, "Home");
             Home.ForeColor = Color.FromArgb(225, 200, 160);
             Home.Name = "Home";
             Home.Text = "Home";
-            resources.ApplyResources(Home, "Home");
             Home.Click += menu_ItemClicked;
             // 
             // Vehicles
             // 
+            resources.ApplyResources(Vehicles, "Vehicles");
             Vehicles.ForeColor = Color.FromArgb(225, 200, 160);
             Vehicles.Name = "Vehicles";
             Vehicles.Padding = new Padding(4, 0, 4, 5);
             Vehicles.Text = "Repertoire";
-            resources.ApplyResources(Vehicles, "Vehicles");
             Vehicles.Click += menu_ItemClicked;
             // 
             // Store
             // 
+            resources.ApplyResources(Store, "Store");
             Store.ForeColor = Color.FromArgb(225, 200, 160);
             Store.Name = "Store";
             Store.Padding = new Padding(4, 0, 4, 5);
             Store.Text = "Merchandise";
-            resources.ApplyResources(Store, "Store");
             Store.Click += menu_ItemClicked;
             // 
             // MyReservations
             // 
+            resources.ApplyResources(MyReservations, "MyReservations");
+            MyReservations.Font = new Font("Segoe UI", 11F, FontStyle.Bold); // Explicitly reset font to match menu
             MyReservations.ForeColor = Color.FromArgb(225, 200, 160);
             MyReservations.Name = "MyReservations";
             MyReservations.Padding = new Padding(4, 0, 4, 5);
             MyReservations.Text = "My Bookings";
-            resources.ApplyResources(MyReservations, "MyReservations");
             MyReservations.Click += menu_ItemClicked;
             // 
             // User
             // 
+            resources.ApplyResources(User, "User");
+            User.Font = new Font("Segoe UI", 11F, FontStyle.Bold); // Explicitly reset font to match menu
             User.ForeColor = Color.FromArgb(225, 200, 160);
             User.Name = "User";
             User.Padding = new Padding(4, 0, 4, 5);
             User.Text = "Users";
-            resources.ApplyResources(User, "User");
             User.Click += menu_ItemClicked;
             // 
             // Management
             // 
+            resources.ApplyResources(Management, "Management");
+            Management.Font = new Font("Segoe UI", 11F, FontStyle.Bold); // Explicitly reset font to match menu
             Management.DropDownItems.AddRange(new ToolStripItem[] { manageProducts, manageVehicles });
             Management.ForeColor = Color.FromArgb(225, 200, 160);
             Management.Name = "Management";
             Management.Text = "Management";
-            resources.ApplyResources(Management, "Management");
             // 
             // manageProducts
             // 
+            resources.ApplyResources(manageProducts, "manageProducts");
             manageProducts.BackColor = Color.FromArgb(30, 15, 30);
             manageProducts.ForeColor = Color.FromArgb(225, 200, 160);
             manageProducts.Name = "manageProducts";
             manageProducts.Text = "Merchandise";
-            resources.ApplyResources(manageProducts, "manageProducts");
             manageProducts.Click += menu_ItemClicked;
             // 
             // manageVehicles
             // 
+            resources.ApplyResources(manageVehicles, "manageVehicles");
             manageVehicles.BackColor = Color.FromArgb(30, 15, 30);
             manageVehicles.ForeColor = Color.FromArgb(225, 200, 160);
             manageVehicles.Name = "manageVehicles";
             manageVehicles.Text = "Plays";
-            resources.ApplyResources(manageVehicles, "manageVehicles");
             manageVehicles.Click += menu_ItemClicked;
             // 
             // Users

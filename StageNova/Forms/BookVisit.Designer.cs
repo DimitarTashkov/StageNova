@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookTicket));
             lblTitle = new Label();
             lblPlayInfo = new Label();
             cmbPerformance = new ComboBox();
@@ -49,9 +48,9 @@
             Management = new ToolStripMenuItem();
             manageProducts = new ToolStripMenuItem();
             manageVehicles = new ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)nudTicketCount).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)roundPictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)nudTicketCount).BeginInit();
             menu.SuspendLayout();
             SuspendLayout();
             // 
@@ -63,7 +62,7 @@
             lblTitle.ForeColor = Color.White;
             lblTitle.Location = new Point(340, 51);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(265, 38);
+            lblTitle.Size = new Size(280, 38);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "Book Theater Ticket";
             // 
@@ -76,21 +75,9 @@
             lblPlayInfo.Location = new Point(60, 124);
             lblPlayInfo.MaximumSize = new Size(600, 0);
             lblPlayInfo.Name = "lblPlayInfo";
-            lblPlayInfo.Size = new Size(108, 28);
+            lblPlayInfo.Size = new Size(94, 28);
             lblPlayInfo.TabIndex = 1;
             lblPlayInfo.Text = "Selected:";
-            // 
-            // lblPerformance
-            // 
-            lblPerformance.AutoSize = true;
-            lblPerformance.BackColor = Color.Transparent;
-            lblPerformance.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblPerformance.ForeColor = Color.White;
-            lblPerformance.Location = new Point(60, 200);
-            lblPerformance.Name = "lblPerformance";
-            lblPerformance.Size = new Size(225, 31);
-            lblPerformance.TabIndex = 3;
-            lblPerformance.Text = "Select Performance:";
             // 
             // cmbPerformance
             // 
@@ -103,6 +90,18 @@
             cmbPerformance.TabIndex = 2;
             cmbPerformance.SelectedIndexChanged += cmbPerformance_SelectedIndexChanged;
             // 
+            // lblPerformance
+            // 
+            lblPerformance.AutoSize = true;
+            lblPerformance.BackColor = Color.Transparent;
+            lblPerformance.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPerformance.ForeColor = Color.White;
+            lblPerformance.Location = new Point(60, 200);
+            lblPerformance.Name = "lblPerformance";
+            lblPerformance.Size = new Size(220, 31);
+            lblPerformance.TabIndex = 3;
+            lblPerformance.Text = "Select Performance:";
+            // 
             // lblTicketCount
             // 
             lblTicketCount.AutoSize = true;
@@ -111,7 +110,7 @@
             lblTicketCount.ForeColor = Color.White;
             lblTicketCount.Location = new Point(60, 300);
             lblTicketCount.Name = "lblTicketCount";
-            lblTicketCount.Size = new Size(228, 31);
+            lblTicketCount.Size = new Size(212, 31);
             lblTicketCount.TabIndex = 4;
             lblTicketCount.Text = "Number of Tickets:";
             // 
@@ -119,8 +118,8 @@
             // 
             nudTicketCount.Font = new Font("Segoe UI", 12F);
             nudTicketCount.Location = new Point(60, 340);
-            nudTicketCount.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             nudTicketCount.Maximum = new decimal(new int[] { 20, 0, 0, 0 });
+            nudTicketCount.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             nudTicketCount.Name = "nudTicketCount";
             nudTicketCount.Size = new Size(120, 34);
             nudTicketCount.TabIndex = 5;
@@ -135,17 +134,17 @@
             lblTotalPrice.ForeColor = Color.LightGreen;
             lblTotalPrice.Location = new Point(60, 400);
             lblTotalPrice.Name = "lblTotalPrice";
-            lblTotalPrice.Size = new Size(150, 32);
+            lblTotalPrice.Size = new Size(182, 32);
             lblTotalPrice.TabIndex = 8;
             lblTotalPrice.Text = "Total: 0.00 BGN";
             // 
             // btnBook
             // 
             btnBook.BackColor = Color.FromArgb(39, 174, 96);
+            btnBook.FlatAppearance.BorderSize = 0;
+            btnBook.FlatStyle = FlatStyle.Flat;
             btnBook.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBook.ForeColor = Color.White;
-            btnBook.FlatStyle = FlatStyle.Flat;
-            btnBook.FlatAppearance.BorderSize = 0;
             btnBook.Location = new Point(60, 460);
             btnBook.Name = "btnBook";
             btnBook.Size = new Size(180, 45);
@@ -207,7 +206,7 @@
             // 
             Home.ForeColor = Color.FromArgb(225, 200, 160);
             Home.Name = "Home";
-            Home.Size = new Size(91, 34);
+            Home.Size = new Size(80, 34);
             Home.Text = "Home";
             Home.Click += menu_ItemClicked;
             // 
@@ -216,7 +215,7 @@
             Vehicles.ForeColor = Color.FromArgb(225, 200, 160);
             Vehicles.Name = "Vehicles";
             Vehicles.Padding = new Padding(4, 0, 4, 5);
-            Vehicles.Size = new Size(117, 34);
+            Vehicles.Size = new Size(119, 34);
             Vehicles.Text = "Repertoire";
             Vehicles.Click += menu_ItemClicked;
             // 
@@ -225,23 +224,21 @@
             Store.ForeColor = Color.FromArgb(225, 200, 160);
             Store.Name = "Store";
             Store.Padding = new Padding(4, 0, 4, 5);
-            Store.Size = new Size(84, 34);
+            Store.Size = new Size(137, 34);
             Store.Text = "Merchandise";
             Store.Click += menu_ItemClicked;
             // 
             // MyReservations
             // 
-            MyReservations.Font = new Font("Verdana", 12F, FontStyle.Bold);
             MyReservations.ForeColor = Color.FromArgb(225, 200, 160);
             MyReservations.Name = "MyReservations";
             MyReservations.Padding = new Padding(4, 0, 4, 5);
-            MyReservations.Size = new Size(136, 34);
+            MyReservations.Size = new Size(166, 34);
             MyReservations.Text = "My Bookings";
             MyReservations.Click += menu_ItemClicked;
             // 
             // Users
             // 
-            Users.Font = new Font("Verdana", 12F, FontStyle.Bold);
             Users.ForeColor = Color.FromArgb(225, 200, 160);
             Users.Name = "Users";
             Users.Padding = new Padding(4, 0, 4, 5);
@@ -253,7 +250,6 @@
             // Management
             // 
             Management.DropDownItems.AddRange(new ToolStripItem[] { manageProducts, manageVehicles });
-            Management.Font = new Font("Verdana", 12F, FontStyle.Bold);
             Management.ForeColor = Color.FromArgb(225, 200, 160);
             Management.Name = "Management";
             Management.Size = new Size(169, 34);
@@ -265,7 +261,7 @@
             manageProducts.BackColor = Color.FromArgb(30, 15, 30);
             manageProducts.ForeColor = Color.FromArgb(225, 200, 160);
             manageProducts.Name = "manageProducts";
-            manageProducts.Size = new Size(198, 30);
+            manageProducts.Size = new Size(239, 30);
             manageProducts.Text = "Merchandise";
             manageProducts.Click += menu_ItemClicked;
             // 
@@ -274,7 +270,7 @@
             manageVehicles.BackColor = Color.FromArgb(30, 15, 30);
             manageVehicles.ForeColor = Color.FromArgb(225, 200, 160);
             manageVehicles.Name = "manageVehicles";
-            manageVehicles.Size = new Size(198, 30);
+            manageVehicles.Size = new Size(239, 30);
             manageVehicles.Text = "Plays";
             manageVehicles.Click += menu_ItemClicked;
             // 
@@ -303,9 +299,9 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Book Theater Ticket";
             Load += BookTicket_Load;
+            ((System.ComponentModel.ISupportInitialize)nudTicketCount).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)roundPictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)nudTicketCount).EndInit();
             menu.ResumeLayout(false);
             menu.PerformLayout();
             ResumeLayout(false);

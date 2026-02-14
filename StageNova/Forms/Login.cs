@@ -121,7 +121,6 @@ namespace StageNova.Forms
         private async void Login_Load(object sender, EventArgs e)
         {
             await SeedAdmin.SeedAdminUserAsync();
-
         }
 
         private void formPanel_Paint(object sender, PaintEventArgs e)

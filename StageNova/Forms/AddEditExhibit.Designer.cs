@@ -394,7 +394,6 @@
             // 
             // MyReservations
             // 
-            MyReservations.Font = new Font("Verdana", 12F, FontStyle.Bold);
             MyReservations.ForeColor = Color.FromArgb(225, 200, 160);
             MyReservations.Name = "MyReservations";
             MyReservations.Padding = new Padding(4, 0, 4, 5);
@@ -404,7 +403,6 @@
             // 
             // Users
             // 
-            Users.Font = new Font("Verdana", 12F, FontStyle.Bold);
             Users.ForeColor = Color.FromArgb(225, 200, 160);
             Users.Name = "Users";
             Users.Padding = new Padding(4, 0, 4, 5);
@@ -416,7 +414,6 @@
             // Management
             // 
             Management.DropDownItems.AddRange(new ToolStripItem[] { manageProducts, manageVehicles });
-            Management.Font = new Font("Verdana", 12F, FontStyle.Bold);
             Management.ForeColor = Color.FromArgb(225, 200, 160);
             Management.Name = "Management";
             Management.Size = new Size(169, 34);
