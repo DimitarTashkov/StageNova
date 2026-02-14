@@ -43,59 +43,59 @@
 
 ```
 StageNova/
-??? Common/                  # Constants, validation rules, fonts
-?   ??? Constants/           # ValidationConstants, FontsPicker
-?   ??? Messages/            # ErrorMessages
-??? DTOs/                    # Data Transfer Objects
-?   ??? User/                # LoginUserInputModel, RegisterUserInputModel, EditProfileInputModel
-??? Extensions/              # ServiceLocator, ServiceRegistration (DI)
-??? Forms/                   # WinForms UI (16 forms)
-?   ??? Index                # Home page
-?   ??? Login / Register     # Authentication
-?   ??? Profile              # User profile management
-?   ??? Catalog              # Play repertoire browser
-?   ??? BookVisit            # Ticket booking
-?   ??? Shop / Checkout      # Merchandise store
-?   ??? Orders               # My Bookings view
-?   ??? ManageExhibits       # Admin: manage plays
-?   ??? AddEditExhibit       # Admin: add/edit play + performances
-?   ??? ManageSouvenirs      # Admin: manage merchandise
-?   ??? AddEditSouvenir      # Admin: add/edit merchandise
-?   ??? Users                # Admin: user management
-?   ??? AboutUs / ContactUs  # Info pages
-?   ??? ...Designer.cs       # Auto-generated designer files
-??? Models/                  # EF Core entities
-?   ??? Play, Performance, Ticket
-?   ??? User, Role, UserRole
-?   ??? Souvenir, Order, OrderItem
-?   ??? DbConfiguration/    # StageNovaDbContext, Configuration, SeedAdmin
-??? Services/                # Business logic layer
-?   ??? Interfaces/          # IPlayService, ITicketService, IUserService, ISouvenirService
-?   ??? PlayService, TicketService, UserService, SouvenirService
-?   ??? BaseService          # Shared validation logic
-??? Utilities/               # Helpers
-?   ??? MenuHelper           # Centralized navigation labels & styling
-?   ??? AuthorizationHelper  # Admin role checks
-?   ??? InvoiceHelper        # Receipt/invoice generation
-?   ??? ValidationHelper     # Input validation
-?   ??? EventsEffects        # UI hover/click effects
-?   ??? LayoutHelper         # Gradient backgrounds
-?   ??? RoundPictureBox      # Custom circular PictureBox control
-?   ??? DynamicContentTranslator  # UI string constants
-??? Migrations/              # EF Core migrations
-??? Properties/              # Embedded resources (images, icons)
-??? Program.cs               # Entry point with DI setup
+├── Common/                  # Constants, validation rules, fonts
+│   ├── Constants/           # ValidationConstants, FontsPicker
+│   └── Messages/            # ErrorMessages
+├── DTOs/                    # Data Transfer Objects
+│   └── User/                # LoginUserInputModel, RegisterUserInputModel, EditProfileInputModel
+├── Extensions/              # ServiceLocator, ServiceRegistration (DI)
+├── Forms/                   # WinForms UI (16 forms)
+│   ├── Index                # Home page
+│   ├── Login / Register     # Authentication
+│   ├── Profile              # User profile management
+│   ├── Catalog              # Play repertoire browser
+│   ├── BookVisit            # Ticket booking
+│   ├── Shop / Checkout      # Merchandise store
+│   ├── Orders               # My Bookings view
+│   ├── ManageExhibits       # Admin: manage plays
+│   ├── AddEditExhibit       # Admin: add/edit play + performances
+│   ├── ManageSouvenirs      # Admin: manage merchandise
+│   ├── AddEditSouvenir      # Admin: add/edit merchandise
+│   ├── Users                # Admin: user management
+│   ├── AboutUs / ContactUs  # Info pages
+│   └── ...Designer.cs       # Auto-generated designer files
+├── Models/                  # EF Core entities
+│   ├── Play, Performance, Ticket
+│   ├── User, Role, UserRole
+│   ├── Souvenir, Order, OrderItem
+│   └── DbConfiguration/    # StageNovaDbContext, Configuration, SeedAdmin
+├── Services/                # Business logic layer
+│   ├── Interfaces/          # IPlayService, ITicketService, IUserService, ISouvenirService
+│   ├── PlayService, TicketService, UserService, SouvenirService
+│   └── BaseService          # Shared validation logic
+├── Utilities/               # Helpers
+│   ├── MenuHelper           # Centralized navigation labels & styling
+│   ├── AuthorizationHelper  # Admin role checks
+│   ├── InvoiceHelper        # Receipt/invoice generation
+│   ├── ValidationHelper     # Input validation
+│   ├── EventsEffects        # UI hover/click effects
+│   ├── LayoutHelper         # Gradient backgrounds
+│   ├── RoundPictureBox      # Custom circular PictureBox control
+│   └── DynamicContentTranslator  # UI string constants
+├── Migrations/              # EF Core migrations
+├── Properties/              # Embedded resources (images, icons)
+└── Program.cs               # Entry point with DI setup
 ```
 
 ---
 
-## ??? Data Model
+## Data Model
 
 ```
-User ????? Ticket ???? Performance ???? Play
-       ??? Order ???? OrderItem ???? Souvenir
+User ──┬── Ticket ──> Performance ──> Play
+       └── Order ──> OrderItem ──> Souvenir
 
-User ???? UserRole ???? Role
+User ──> UserRole ──> Role
 ```
 
 | Entity | Key Fields |
