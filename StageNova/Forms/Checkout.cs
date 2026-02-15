@@ -22,7 +22,19 @@ namespace StageNova.Forms
             _item = item;
             _user = user;
             this.userService = ServiceLocator.GetService<IUserService>();
-            activeUser = userService.GetLoggedInUserAsync();
+            
+            // Fix Problem 1 & 2: Handle possible null and ensure field initialization
+            var loggedIn = userService.GetLoggedInUserAsync();
+            if (loggedIn == null)
+            {
+                // Fallback to the passed user if service returns null, or throw if critical
+                activeUser = _user; 
+            }
+            else
+            {
+                activeUser = loggedIn;
+            }
+
             SetupUI();
         }
 
@@ -46,8 +58,10 @@ namespace StageNova.Forms
             {
                 _service.PurchaseItem(_user.Id, _item.Id, 1, txtAddress.Text, txtPhone.Text);
                 MessageBox.Show("Order placed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                // Fix Problem 3: Start orders with required dependencies
+                var ticketService = ServiceLocator.GetService<ITicketService>();
+                var userService = ServiceLocator.GetService<IUserService>();
+                Program.SwitchMainForm(new Orders(ticketService, _service, userService));
             }
             catch (Exception ex)
             {

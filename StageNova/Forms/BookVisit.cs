@@ -150,7 +150,11 @@ namespace StageNova.Forms
                     $"Total: {total:F2} BGN",
                     "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                Program.SwitchMainForm(new Plays());
+                var ticketService = ServiceLocator.GetService<ITicketService>();
+                var userService = ServiceLocator.GetService<IUserService>();
+                var souvenirService = ServiceLocator.GetService<ISouvenirService>();
+
+                Program.SwitchMainForm(new Orders(ticketService, souvenirService, userService));
             }
             catch (Exception ex)
             {
