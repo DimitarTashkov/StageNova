@@ -1,4 +1,4 @@
-﻿using StageNova.Extensions;
+using StageNova.Extensions;
 using StageNova.Models;
 using StageNova.Services.Interfaces;
 using StageNova.Utilities;
@@ -14,18 +14,18 @@ using System.Windows.Forms;
 
 namespace StageNova.Forms
 {
-    public partial class ManageSouvenirs : Form
+    public partial class ManageMerchandise : Form
     {
         private readonly ISouvenirService _service;
         private readonly IUserService _userService = ServiceLocator.GetService<IUserService>();
         private User? activeUser;
-        public ManageSouvenirs(ISouvenirService service)
+        public ManageMerchandise(ISouvenirService service)
         {
             InitializeComponent();
             _service = service;
             activeUser = _userService.GetLoggedInUserAsync();
         }
-        private void ManageSouvenirs_Load(object sender, EventArgs e)
+        private void ManageMerchandise_Load(object sender, EventArgs e)
         {
             SetupGrid();
             LoadData();
@@ -88,7 +88,7 @@ namespace StageNova.Forms
 
             if (dgvSouvenirs.Columns[e.ColumnIndex].Name == "Edit")
             {
-                Program.SwitchMainForm(new AddEditSouvenir(_service, item));
+                Program.SwitchMainForm(new AddEditMerchandise(_service, item));
             }
             else if (dgvSouvenirs.Columns[e.ColumnIndex].Name == "Delete")
             {
@@ -102,7 +102,7 @@ namespace StageNova.Forms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Program.SwitchMainForm(new AddEditSouvenir(_service, null));
+            Program.SwitchMainForm(new AddEditMerchandise(_service, null));
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -135,7 +135,7 @@ namespace StageNova.Forms
                     form = new Users(userService);
                     break;
                 case "manageProducts":
-                    form = new ManageSouvenirs(ServiceLocator.GetService<ISouvenirService>());
+                    form = new ManageMerchandise(ServiceLocator.GetService<ISouvenirService>());
                     break;
                 case "manageVehicles":
                     form = new ManagePlays(ServiceLocator.GetService<IPlayService>());

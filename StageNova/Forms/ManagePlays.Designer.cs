@@ -1,4 +1,4 @@
-﻿namespace StageNova.Forms
+namespace StageNova.Forms
 {
     partial class ManagePlays
     {

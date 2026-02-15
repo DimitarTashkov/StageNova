@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Index));
             footer = new Button();
             storeButton = new Button();
             exhibitionsButton = new Button();
@@ -56,10 +55,10 @@
             // footer
             // 
             footer.BackColor = Color.FromArgb(120, 27, 51);
-            footer.ForeColor = Color.White;
+            footer.Cursor = Cursors.Hand;
             footer.FlatStyle = FlatStyle.Flat;
             footer.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            footer.Cursor = Cursors.Hand;
+            footer.ForeColor = Color.White;
             footer.Location = new Point(0, 545);
             footer.Margin = new Padding(3, 4, 3, 4);
             footer.Name = "footer";
@@ -71,10 +70,10 @@
             // storeButton
             // 
             storeButton.BackColor = Color.FromArgb(120, 27, 51);
-            storeButton.ForeColor = Color.White;
+            storeButton.Cursor = Cursors.Hand;
             storeButton.FlatStyle = FlatStyle.Flat;
             storeButton.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            storeButton.Cursor = Cursors.Hand;
+            storeButton.ForeColor = Color.White;
             storeButton.Location = new Point(605, 437);
             storeButton.Margin = new Padding(3, 4, 3, 4);
             storeButton.Name = "storeButton";
@@ -87,10 +86,10 @@
             // exhibitionsButton
             // 
             exhibitionsButton.BackColor = Color.FromArgb(120, 27, 51);
-            exhibitionsButton.ForeColor = Color.White;
+            exhibitionsButton.Cursor = Cursors.Hand;
             exhibitionsButton.FlatStyle = FlatStyle.Flat;
             exhibitionsButton.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            exhibitionsButton.Cursor = Cursors.Hand;
+            exhibitionsButton.ForeColor = Color.White;
             exhibitionsButton.Location = new Point(95, 436);
             exhibitionsButton.Margin = new Padding(3, 4, 3, 4);
             exhibitionsButton.Name = "exhibitionsButton";
@@ -102,6 +101,7 @@
             // 
             // pictureBox2
             // 
+            pictureBox2.Image = Properties.Resources.drama_background_wt956l4ngvrqc6w5;
             pictureBox2.Location = new Point(0, 115);
             pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
@@ -112,6 +112,7 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.Image = Properties.Resources.throw_pillows_blankets_featured;
             pictureBox1.Location = new Point(458, 116);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
@@ -137,7 +138,7 @@
             // 
             Home.ForeColor = Color.FromArgb(225, 200, 160);
             Home.Name = "Home";
-            Home.Size = new Size(91, 34);
+            Home.Size = new Size(80, 34);
             Home.Text = "Home";
             Home.Click += menu_ItemClicked;
             // 
@@ -146,7 +147,7 @@
             Vehicles.ForeColor = Color.FromArgb(225, 200, 160);
             Vehicles.Name = "Vehicles";
             Vehicles.Padding = new Padding(4, 0, 4, 5);
-            Vehicles.Size = new Size(117, 34);
+            Vehicles.Size = new Size(119, 34);
             Vehicles.Text = "Repertoire";
             Vehicles.Click += menu_ItemClicked;
             // 
@@ -155,7 +156,7 @@
             Store.ForeColor = Color.FromArgb(225, 200, 160);
             Store.Name = "Store";
             Store.Padding = new Padding(4, 0, 4, 5);
-            Store.Size = new Size(84, 34);
+            Store.Size = new Size(137, 34);
             Store.Text = "Merchandise";
             Store.Click += menu_ItemClicked;
             // 
@@ -164,7 +165,7 @@
             MyReservations.ForeColor = Color.FromArgb(225, 200, 160);
             MyReservations.Name = "MyReservations";
             MyReservations.Padding = new Padding(4, 0, 4, 5);
-            MyReservations.Size = new Size(136, 34);
+            MyReservations.Size = new Size(141, 34);
             MyReservations.Text = "My Bookings";
             MyReservations.Click += menu_ItemClicked;
             // 
@@ -173,7 +174,7 @@
             Users.ForeColor = Color.FromArgb(225, 200, 160);
             Users.Name = "Users";
             Users.Padding = new Padding(4, 0, 4, 5);
-            Users.Size = new Size(87, 34);
+            Users.Size = new Size(72, 34);
             Users.Text = "Users";
             Users.Visible = false;
             Users.Click += menu_ItemClicked;
@@ -183,7 +184,7 @@
             Management.DropDownItems.AddRange(new ToolStripItem[] { manageProducts, manageVehicles });
             Management.ForeColor = Color.FromArgb(225, 200, 160);
             Management.Name = "Management";
-            Management.Size = new Size(169, 34);
+            Management.Size = new Size(144, 34);
             Management.Text = "Management";
             Management.Visible = false;
             // 
@@ -192,7 +193,7 @@
             manageProducts.BackColor = Color.FromArgb(30, 15, 30);
             manageProducts.ForeColor = Color.FromArgb(225, 200, 160);
             manageProducts.Name = "manageProducts";
-            manageProducts.Size = new Size(198, 30);
+            manageProducts.Size = new Size(211, 30);
             manageProducts.Text = "Merchandise";
             manageProducts.Click += menu_ItemClicked;
             // 
@@ -201,7 +202,7 @@
             manageVehicles.BackColor = Color.FromArgb(30, 15, 30);
             manageVehicles.ForeColor = Color.FromArgb(225, 200, 160);
             manageVehicles.Name = "manageVehicles";
-            manageVehicles.Size = new Size(198, 30);
+            manageVehicles.Size = new Size(211, 30);
             manageVehicles.Text = "Plays";
             manageVehicles.Click += menu_ItemClicked;
             // 
@@ -209,30 +210,30 @@
             // 
             aboutUs.AutoSize = true;
             aboutUs.BackColor = Color.Transparent;
+            aboutUs.Cursor = Cursors.Hand;
             aboutUs.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             aboutUs.ForeColor = Color.White;
-            aboutUs.Cursor = Cursors.Hand;
-            aboutUs.TextAlign = ContentAlignment.MiddleCenter;
             aboutUs.Location = new Point(160, 556);
             aboutUs.Name = "aboutUs";
             aboutUs.Size = new Size(93, 25);
             aboutUs.TabIndex = 20;
             aboutUs.Text = "About us";
+            aboutUs.TextAlign = ContentAlignment.MiddleCenter;
             aboutUs.Click += aboutUs_Click;
             // 
             // contactUs
             // 
             contactUs.AutoSize = true;
             contactUs.BackColor = Color.Transparent;
+            contactUs.Cursor = Cursors.Hand;
             contactUs.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             contactUs.ForeColor = Color.White;
-            contactUs.Cursor = Cursors.Hand;
-            contactUs.TextAlign = ContentAlignment.MiddleCenter;
             contactUs.Location = new Point(704, 556);
             contactUs.Name = "contactUs";
             contactUs.Size = new Size(106, 25);
             contactUs.TabIndex = 21;
             contactUs.Text = "Contact us";
+            contactUs.TextAlign = ContentAlignment.MiddleCenter;
             contactUs.Click += contactUs_Click;
             // 
             // welcomeMessage
@@ -240,12 +241,12 @@
             welcomeMessage.BackColor = Color.Transparent;
             welcomeMessage.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
             welcomeMessage.ForeColor = Color.White;
-            welcomeMessage.TextAlign = ContentAlignment.MiddleCenter;
             welcomeMessage.Location = new Point(28, 70);
             welcomeMessage.Name = "welcomeMessage";
             welcomeMessage.Size = new Size(856, 41);
             welcomeMessage.TabIndex = 23;
             welcomeMessage.Text = "Welcome to StageNova — where stories come alive on stage.";
+            welcomeMessage.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // roundPictureBox1
             // 
@@ -260,7 +261,7 @@
             // 
             // Index
             // 
-            resources.ApplyResources(this, "$this");
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.bg_stagenova;
             ClientSize = new Size(914, 600);

@@ -1,4 +1,4 @@
-﻿using StageNova.Extensions;
+using StageNova.Extensions;
 using StageNova.Models;
 using StageNova.Services.Interfaces;
 using StageNova.Utilities;
@@ -42,6 +42,11 @@ namespace StageNova.Forms
             dgvExhibits.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvExhibits.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
+            if (!dgvExhibits.Columns.Contains("ToggleActive"))
+            {
+                var toggleBtn = new DataGridViewButtonColumn { Name = "ToggleActive", Text = "Toggle Active", UseColumnTextForButtonValue = true };
+                dgvExhibits.Columns.Add(toggleBtn);
+            }
             if (!dgvExhibits.Columns.Contains("Edit"))
             {
                 var editBtn = new DataGridViewButtonColumn { Name = "Edit", Text = "Edit", UseColumnTextForButtonValue = true };
@@ -83,6 +88,12 @@ namespace StageNova.Forms
             {
                 Program.SwitchMainForm(new AddEditPlay(_service, play));
             }
+            else if (dgvExhibits.Columns[e.ColumnIndex].Name == "ToggleActive")
+            {
+                play.IsActive = !play.IsActive;
+                _service.UpdatePlay(play);
+                LoadData();
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -119,7 +130,7 @@ namespace StageNova.Forms
                     form = new Users(userService);
                     break;
                 case "manageProducts":
-                    form = new ManageSouvenirs(ServiceLocator.GetService<ISouvenirService>());
+                    form = new ManageMerchandise(ServiceLocator.GetService<ISouvenirService>());
                     break;
                 case "manageVehicles":
                     form = new ManagePlays(ServiceLocator.GetService<IPlayService>());

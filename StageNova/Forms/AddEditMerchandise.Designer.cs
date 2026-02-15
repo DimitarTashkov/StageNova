@@ -1,6 +1,6 @@
-﻿namespace StageNova.Forms
+namespace StageNova.Forms
 {
-    partial class AddEditSouvenir
+    partial class AddEditMerchandise
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEditSouvenir));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEditMerchandise));
             label6 = new Label();
             txtPrice = new TextBox();
             btnBack = new Button();
@@ -284,7 +284,7 @@
             manageVehicles.Text = "Plays";
             manageVehicles.Click += menu_ItemClicked;
             // 
-            // AddEditSouvenir
+            // AddEditMerchandise
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -307,7 +307,7 @@
             Controls.Add(label1);
             DoubleBuffered = true;
             Icon = Properties.Resources.StageNova_logo1;
-            Name = "AddEditSouvenir";
+            Name = "AddEditMerchandise";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Add / Edit Merchandise";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

@@ -1,4 +1,4 @@
-﻿namespace StageNova.Forms
+namespace StageNova.Forms
 {
     partial class AddEditPlay
     {
@@ -46,6 +46,7 @@
             label6 = new Label();
             lblPrice = new Label();
             txtPrice = new TextBox();
+            chkIsActive = new CheckBox();
             grpPerformances = new GroupBox();
             dgvPerformances = new DataGridView();
             btnAddPerformance = new Button();
@@ -184,6 +185,21 @@
             txtPrice.Size = new Size(120, 27);
             txtPrice.TabIndex = 61;
             txtPrice.Text = "0.00";
+            // 
+            // chkIsActive
+            // 
+            chkIsActive.AutoSize = true;
+            chkIsActive.BackColor = Color.Transparent;
+            chkIsActive.Checked = true;
+            chkIsActive.CheckState = CheckState.Checked;
+            chkIsActive.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            chkIsActive.ForeColor = Color.White;
+            chkIsActive.Location = new Point(200, 390);
+            chkIsActive.Name = "chkIsActive";
+            chkIsActive.Size = new Size(88, 29);
+            chkIsActive.TabIndex = 67;
+            chkIsActive.Text = "Active";
+            chkIsActive.UseVisualStyleBackColor = false;
             // 
             // label5 - Description
             // 
@@ -449,6 +465,7 @@
             Controls.Add(menu);
             Controls.Add(grpPerformances);
             Controls.Add(label6);
+            Controls.Add(chkIsActive);
             Controls.Add(lblPrice);
             Controls.Add(txtPrice);
             Controls.Add(label2);
@@ -503,6 +520,7 @@
         private Label label6;
         private Label lblPrice;
         private TextBox txtPrice;
+        private CheckBox chkIsActive;
         private GroupBox grpPerformances;
         private DataGridView dgvPerformances;
         private Button btnAddPerformance;

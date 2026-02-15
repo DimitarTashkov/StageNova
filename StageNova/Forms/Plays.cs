@@ -43,13 +43,13 @@ namespace StageNova.Forms
         private void LoadPlays()
         {
             flowPanel.Controls.Clear();
-            var plays = _service.GetAllPlays();
+            var plays = _service.GetAllPlays().Where(p => p.IsActive).ToList();
 
             foreach (var item in plays)
             {
                 Panel card = new Panel
                 {
-                    Size = new Size(230, 320),
+                    Size = new Size(250, 320),
                     BorderStyle = BorderStyle.None,
                     BackColor = Color.White,
                     Margin = new Padding(15)
@@ -58,7 +58,7 @@ namespace StageNova.Forms
                 RoundPictureBox pb = new RoundPictureBox
                 {
                     Size = new Size(210, 160),
-                    Location = new Point(10, 10),
+                    Location = new Point(20, 10),
                     SizeMode = PictureBoxSizeMode.StretchImage,
                     BackColor = Color.LightGray
                 };
@@ -80,7 +80,7 @@ namespace StageNova.Forms
                 Label lblTitle = new Label
                 {
                     Text = item.Title,
-                    Location = new Point(10, 180),
+                    Location = new Point(20, 180),
                     AutoSize = true,
                     Font = new Font("Segoe UI", 10, FontStyle.Bold),
                     ForeColor = Color.DarkSlateBlue
@@ -90,7 +90,7 @@ namespace StageNova.Forms
                 Label lblInfo = new Label
                 {
                     Text = $"{item.Genre} | {item.DurationMinutes} min | {item.TicketPrice:F2} BGN",
-                    Location = new Point(10, 210),
+                    Location = new Point(20, 210),
                     AutoSize = true,
                     ForeColor = Color.Gray
                 };
@@ -99,7 +99,7 @@ namespace StageNova.Forms
                 Button btnBook = new Button
                 {
                     Text = "Book Ticket",
-                    Location = new Point(20, 260),
+                    Location = new Point(25, 260),
                     Size = new Size(200, 40),
                     FlatStyle = FlatStyle.Flat,
                     BackColor = Color.Black,
@@ -151,7 +151,7 @@ namespace StageNova.Forms
                     form = new Users(userService);
                     break;
                 case "manageProducts":
-                    form = new ManageSouvenirs(ServiceLocator.GetService<ISouvenirService>());
+                    form = new ManageMerchandise(ServiceLocator.GetService<ISouvenirService>());
                     break;
                 case "manageVehicles":
                     form = new ManagePlays(ServiceLocator.GetService<IPlayService>());

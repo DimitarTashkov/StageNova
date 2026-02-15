@@ -1,6 +1,6 @@
-﻿namespace StageNova.Forms
+namespace StageNova.Forms
 {
-    partial class ManageSouvenirs
+    partial class ManageMerchandise
     {
         /// <summary>
         /// Required designer variable.
@@ -182,7 +182,7 @@
             manageVehicles.Text = "Plays";
             manageVehicles.Click += menu_ItemClicked;
             // 
-            // ManageSouvenirs
+            // ManageMerchandise
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -196,10 +196,10 @@
             Controls.Add(dgvSouvenirs);
             DoubleBuffered = true;
             Icon = Properties.Resources.StageNova_logo1;
-            Name = "ManageSouvenirs";
+            Name = "ManageMerchandise";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Manage Merchandise";
-            Load += ManageSouvenirs_Load;
+            Load += ManageMerchandise_Load;
             ((System.ComponentModel.ISupportInitialize)dgvSouvenirs).EndInit();
             ((System.ComponentModel.ISupportInitialize)roundPictureBox1).EndInit();
             menu.ResumeLayout(false);

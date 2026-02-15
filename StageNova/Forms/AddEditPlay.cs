@@ -1,4 +1,4 @@
-﻿using StageNova.Models;
+using StageNova.Models;
 using StageNova.Services.Interfaces;
 using StageNova.Utilities;
 using StageNova.Extensions;
@@ -63,6 +63,7 @@ namespace StageNova.Forms
             txtModel.Text = _play.Director;
             txtDescription.Text = _play.Description;
             txtPrice.Text = _play.TicketPrice.ToString("F2");
+            chkIsActive.Checked = _play.IsActive;
 
             if (!string.IsNullOrEmpty(_play.Genre))
                 cmbType.SelectedItem = _play.Genre;
@@ -211,7 +212,7 @@ namespace StageNova.Forms
             _play.TicketPrice = ticketPrice;
             _play.Description = txtDescription.Text.Trim();
             _play.PosterImage = _selectedImageBytes;
-            _play.IsActive = true;
+            _play.IsActive = chkIsActive.Checked;
 
             try
             {
@@ -270,7 +271,7 @@ namespace StageNova.Forms
                     form = new Users(userService);
                     break;
                 case "manageProducts":
-                    form = new ManageSouvenirs(ServiceLocator.GetService<ISouvenirService>());
+                    form = new ManageMerchandise(ServiceLocator.GetService<ISouvenirService>());
                     break;
                 case "manageVehicles":
                     form = new ManagePlays(ServiceLocator.GetService<IPlayService>());

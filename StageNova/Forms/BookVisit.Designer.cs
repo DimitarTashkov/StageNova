@@ -68,14 +68,13 @@
             // 
             // lblPlayInfo
             // 
-            lblPlayInfo.AutoSize = true;
             lblPlayInfo.BackColor = Color.Transparent;
             lblPlayInfo.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblPlayInfo.ForeColor = Color.White;
-            lblPlayInfo.Location = new Point(60, 124);
-            lblPlayInfo.MaximumSize = new Size(600, 0);
+            lblPlayInfo.Location = new Point(60, 110);
+            lblPlayInfo.MaximumSize = new Size(600, 120);
             lblPlayInfo.Name = "lblPlayInfo";
-            lblPlayInfo.Size = new Size(94, 28);
+            lblPlayInfo.Size = new Size(600, 120);
             lblPlayInfo.TabIndex = 1;
             lblPlayInfo.Text = "Selected:";
             // 
@@ -84,7 +83,7 @@
             cmbPerformance.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbPerformance.Font = new Font("Segoe UI", 11F);
             cmbPerformance.FormattingEnabled = true;
-            cmbPerformance.Location = new Point(60, 240);
+            cmbPerformance.Location = new Point(60, 280);
             cmbPerformance.Name = "cmbPerformance";
             cmbPerformance.Size = new Size(420, 33);
             cmbPerformance.TabIndex = 2;
@@ -96,7 +95,7 @@
             lblPerformance.BackColor = Color.Transparent;
             lblPerformance.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblPerformance.ForeColor = Color.White;
-            lblPerformance.Location = new Point(60, 200);
+            lblPerformance.Location = new Point(60, 245);
             lblPerformance.Name = "lblPerformance";
             lblPerformance.Size = new Size(220, 31);
             lblPerformance.TabIndex = 3;
@@ -108,7 +107,7 @@
             lblTicketCount.BackColor = Color.Transparent;
             lblTicketCount.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTicketCount.ForeColor = Color.White;
-            lblTicketCount.Location = new Point(60, 300);
+            lblTicketCount.Location = new Point(60, 330);
             lblTicketCount.Name = "lblTicketCount";
             lblTicketCount.Size = new Size(212, 31);
             lblTicketCount.TabIndex = 4;
@@ -117,7 +116,7 @@
             // nudTicketCount
             // 
             nudTicketCount.Font = new Font("Segoe UI", 12F);
-            nudTicketCount.Location = new Point(60, 340);
+            nudTicketCount.Location = new Point(60, 370);
             nudTicketCount.Maximum = new decimal(new int[] { 20, 0, 0, 0 });
             nudTicketCount.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             nudTicketCount.Name = "nudTicketCount";
@@ -132,7 +131,7 @@
             lblTotalPrice.BackColor = Color.Transparent;
             lblTotalPrice.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTotalPrice.ForeColor = Color.LightGreen;
-            lblTotalPrice.Location = new Point(60, 400);
+            lblTotalPrice.Location = new Point(60, 420);
             lblTotalPrice.Name = "lblTotalPrice";
             lblTotalPrice.Size = new Size(182, 32);
             lblTotalPrice.TabIndex = 8;
@@ -145,7 +144,7 @@
             btnBook.FlatStyle = FlatStyle.Flat;
             btnBook.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBook.ForeColor = Color.White;
-            btnBook.Location = new Point(60, 460);
+            btnBook.Location = new Point(60, 470);
             btnBook.Name = "btnBook";
             btnBook.Size = new Size(180, 45);
             btnBook.TabIndex = 6;
@@ -158,7 +157,7 @@
             btnBack.BackColor = Color.DarkOrange;
             btnBack.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBack.ForeColor = SystemColors.ControlText;
-            btnBack.Location = new Point(270, 466);
+            btnBack.Location = new Point(260, 475);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(100, 39);
             btnBack.TabIndex = 27;

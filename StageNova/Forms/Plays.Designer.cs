@@ -40,9 +40,9 @@ namespace StageNova.Forms
             flowPanel.BackColor = SystemColors.ScrollBar;
             flowPanel.BackgroundImage = Properties.Resources.gradient_img__4_;
             flowPanel.BackgroundImageLayout = ImageLayout.Stretch;
-            flowPanel.Location = new Point(27, 105);
+            flowPanel.Location = new Point(58, 111);
             flowPanel.Name = "flowPanel";
-            flowPanel.Size = new Size(925, 448);
+            flowPanel.Size = new Size(860, 448);
             flowPanel.TabIndex = 0;
             // 
             // btnBack
@@ -64,9 +64,9 @@ namespace StageNova.Forms
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(376, 51);
+            label1.Location = new Point(423, 51);
             label1.Name = "label1";
-            label1.Size = new Size(249, 38);
+            label1.Size = new Size(155, 38);
             label1.TabIndex = 26;
             label1.Text = "Repertoire";
             // 
@@ -85,8 +85,8 @@ namespace StageNova.Forms
             // menu
             // 
             menu.BackColor = Color.FromArgb(30, 15, 30);
-            menu.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             menu.BackgroundImageLayout = ImageLayout.Stretch;
+            menu.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             menu.ImageScalingSize = new Size(20, 20);
             menu.Items.AddRange(new ToolStripItem[] { Home, Vehicles, Store, MyReservations, Users, Management });
             menu.Location = new Point(0, 0);
@@ -100,7 +100,7 @@ namespace StageNova.Forms
             // 
             Home.ForeColor = Color.FromArgb(225, 200, 160);
             Home.Name = "Home";
-            Home.Size = new Size(91, 34);
+            Home.Size = new Size(80, 34);
             Home.Text = "Home";
             Home.Click += menu_ItemClicked;
             // 
@@ -109,7 +109,7 @@ namespace StageNova.Forms
             Vehicles.ForeColor = Color.FromArgb(225, 200, 160);
             Vehicles.Name = "Vehicles";
             Vehicles.Padding = new Padding(4, 0, 4, 5);
-            Vehicles.Size = new Size(117, 34);
+            Vehicles.Size = new Size(119, 34);
             Vehicles.Text = "Repertoire";
             Vehicles.Click += menu_ItemClicked;
             // 
@@ -118,7 +118,7 @@ namespace StageNova.Forms
             Store.ForeColor = Color.FromArgb(225, 200, 160);
             Store.Name = "Store";
             Store.Padding = new Padding(4, 0, 4, 5);
-            Store.Size = new Size(84, 34);
+            Store.Size = new Size(137, 34);
             Store.Text = "Merchandise";
             Store.Click += menu_ItemClicked;
             // 
@@ -127,7 +127,7 @@ namespace StageNova.Forms
             MyReservations.ForeColor = Color.FromArgb(225, 200, 160);
             MyReservations.Name = "MyReservations";
             MyReservations.Padding = new Padding(4, 0, 4, 5);
-            MyReservations.Size = new Size(136, 34);
+            MyReservations.Size = new Size(141, 34);
             MyReservations.Text = "My Bookings";
             MyReservations.Click += menu_ItemClicked;
             // 
@@ -136,7 +136,7 @@ namespace StageNova.Forms
             Users.ForeColor = Color.FromArgb(225, 200, 160);
             Users.Name = "Users";
             Users.Padding = new Padding(4, 0, 4, 5);
-            Users.Size = new Size(87, 34);
+            Users.Size = new Size(72, 34);
             Users.Text = "Users";
             Users.Visible = false;
             Users.Click += menu_ItemClicked;
@@ -146,7 +146,7 @@ namespace StageNova.Forms
             Management.DropDownItems.AddRange(new ToolStripItem[] { manageProducts, manageVehicles });
             Management.ForeColor = Color.FromArgb(225, 200, 160);
             Management.Name = "Management";
-            Management.Size = new Size(169, 34);
+            Management.Size = new Size(144, 34);
             Management.Text = "Management";
             Management.Visible = false;
             // 
@@ -155,7 +155,7 @@ namespace StageNova.Forms
             manageProducts.BackColor = Color.FromArgb(30, 15, 30);
             manageProducts.ForeColor = Color.FromArgb(225, 200, 160);
             manageProducts.Name = "manageProducts";
-            manageProducts.Size = new Size(198, 30);
+            manageProducts.Size = new Size(211, 30);
             manageProducts.Text = "Merchandise";
             manageProducts.Click += menu_ItemClicked;
             // 
@@ -164,7 +164,7 @@ namespace StageNova.Forms
             manageVehicles.BackColor = Color.FromArgb(30, 15, 30);
             manageVehicles.ForeColor = Color.FromArgb(225, 200, 160);
             manageVehicles.Name = "manageVehicles";
-            manageVehicles.Size = new Size(198, 30);
+            manageVehicles.Size = new Size(211, 30);
             manageVehicles.Text = "Plays";
             manageVehicles.Click += menu_ItemClicked;
             // 

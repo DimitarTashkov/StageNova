@@ -63,7 +63,7 @@ namespace StageNova.Forms
                     form = new Users(userService);
                     break;
                 case "manageProducts":
-                    form = new ManageSouvenirs(ServiceLocator.GetService<ISouvenirService>());
+                    form = new ManageMerchandise(ServiceLocator.GetService<ISouvenirService>());
                     break;
                 case "manageVehicles":
                     form = new ManagePlays(ServiceLocator.GetService<IPlayService>());

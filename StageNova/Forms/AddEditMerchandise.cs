@@ -1,4 +1,4 @@
-﻿using StageNova.Extensions;
+using StageNova.Extensions;
 using StageNova.Models;
 using StageNova.Services.Interfaces;
 using StageNova.Utilities;
@@ -15,14 +15,14 @@ using System.Xml.Linq;
 
 namespace StageNova.Forms
 {
-    public partial class AddEditSouvenir : Form
+    public partial class AddEditMerchandise : Form
     {
         private readonly ISouvenirService _service;
         private Souvenir _souvenir;
         private string _selectedImagePath = null;
         private User? activeUser;
         private readonly IUserService _userService = ServiceLocator.GetService<IUserService>();
-        public AddEditSouvenir(ISouvenirService service, Souvenir souvenir)
+        public AddEditMerchandise(ISouvenirService service, Souvenir souvenir)
         {
             InitializeComponent();
             _service = service;
@@ -80,7 +80,7 @@ namespace StageNova.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            // 1. Валидация
+            // 1. ?????????
             if (string.IsNullOrWhiteSpace(txtName.Text))
             {
                 MessageBox.Show("Name is required!"); return;
@@ -94,7 +94,7 @@ namespace StageNova.Forms
                 MessageBox.Show("Invalid Stock format!"); return;
             }
 
-            // 2. Обработка на снимката (Копиране в PhotosStorage)
+            // 2. ????????? ?? ???????? (???????? ? PhotosStorage)
             string finalImagePath = _selectedImagePath;
             if (_selectedImagePath != null && !_selectedImagePath.Contains("PhotosStorage"))
             {
@@ -116,13 +116,13 @@ namespace StageNova.Forms
                 }
             }
 
-            // 3. Пълним обекта
+            // 3. ?????? ??????
             _souvenir.Name = txtName.Text;
             _souvenir.Price = price;
             _souvenir.StockQuantity = stock;
             _souvenir.ImagePath = finalImagePath;
 
-            // 4. Запис в базата
+            // 4. ????? ? ??????
             try
             {
                 if (_souvenir.Id == Guid.Empty)
@@ -131,7 +131,7 @@ namespace StageNova.Forms
                     _service.UpdateSouvenir(_souvenir);
 
                 MessageBox.Show("Item saved successfully!");
-                Program.SwitchMainForm(new ManageSouvenirs(_service));
+                Program.SwitchMainForm(new ManageMerchandise(_service));
             }
             catch (Exception ex)
             {
@@ -141,7 +141,7 @@ namespace StageNova.Forms
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            Program.SwitchMainForm(new ManageSouvenirs(_service));
+            Program.SwitchMainForm(new ManageMerchandise(_service));
 
         }
 
@@ -169,7 +169,7 @@ namespace StageNova.Forms
                     form = new Users(userService);
                     break;
                 case "manageProducts":
-                    form = new ManageSouvenirs(ServiceLocator.GetService<ISouvenirService>());
+                    form = new ManageMerchandise(ServiceLocator.GetService<ISouvenirService>());
                     break;
                 case "manageVehicles":
                     form = new ManagePlays(ServiceLocator.GetService<IPlayService>());

@@ -73,6 +73,16 @@ namespace StageNova.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap drama_background_wt956l4ngvrqc6w5 {
+            get {
+                object obj = ResourceManager.GetObject("drama-background-wt956l4ngvrqc6w5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gradient_img__4_ {
             get {
                 object obj = ResourceManager.GetObject("gradient_img (4)", resourceCulture);
@@ -101,12 +111,22 @@ namespace StageNova.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon.
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon StageNova_logo1 {
             get {
                 object obj = ResourceManager.GetObject("StageNova_logo1", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap throw_pillows_blankets_featured {
+            get {
+                object obj = ResourceManager.GetObject("throw-pillows-blankets-featured", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

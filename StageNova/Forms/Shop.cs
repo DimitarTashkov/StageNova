@@ -53,7 +53,7 @@ namespace StageNova.Forms
 
                 Panel card = new Panel
                 {
-                    Size = new Size(200, 260),
+                    Size = new Size(240, 260),
                     BackColor = Color.WhiteSmoke,
                     Margin = new Padding(10),
                     BorderStyle = BorderStyle.FixedSingle
@@ -69,7 +69,7 @@ namespace StageNova.Forms
 
                 Label lblPrice = new Label
                 {
-                    Text = $"{item.Price:F2} BGN",
+                    Text = $"{item.Price:F2} EUR",
                     Location = new Point(10, 40),
                     AutoSize = true,
                     ForeColor = Color.Green,
@@ -79,7 +79,7 @@ namespace StageNova.Forms
                 Label lblQuantity = new Label
                 {
                     Text = $"Available: {item.StockQuantity}",
-                    Location = new Point(120, 45),
+                    Location = new Point(140, 45),
                     AutoSize = true,
                     ForeColor = Color.DimGray,
                     Font = new Font("Arial", 9, FontStyle.Regular)
@@ -89,14 +89,14 @@ namespace StageNova.Forms
                 {
                     ImageLocation = item.ImagePath,
                     SizeMode = PictureBoxSizeMode.Zoom,
-                    Location = new Point(10, 70),
+                    Location = new Point(30, 70),
                     Size = new Size(178, 120)
                 };
 
                 Button btnBuy = new Button
                 {
                     Text = "Buy Now",
-                    Location = new Point(10, 200),
+                    Location = new Point(30, 200),
                     Size = new Size(178, 40),
                     BackColor = Color.Orange,
                     FlatStyle = FlatStyle.Flat,
@@ -152,7 +152,7 @@ namespace StageNova.Forms
                     form = new Users(userService);
                     break;
                 case "manageProducts":
-                    form = new ManageSouvenirs(ServiceLocator.GetService<ISouvenirService>());
+                    form = new ManageMerchandise(ServiceLocator.GetService<ISouvenirService>());
                     break;
                 case "manageVehicles":
                     form = new ManagePlays(ServiceLocator.GetService<IPlayService>());
