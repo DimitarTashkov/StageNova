@@ -179,6 +179,7 @@
             DoubleBuffered = true;
             Icon = Properties.Resources.StageNova_logo1;
             Name = "ContactUs";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Contact us";
             Load += ContactUs_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

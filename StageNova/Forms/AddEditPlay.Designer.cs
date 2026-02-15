@@ -28,7 +28,6 @@ namespace StageNova.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEditPlay));
             btnBack = new Button();
             btnSave = new Button();
             pictureBox1 = new PictureBox();
@@ -49,11 +48,11 @@ namespace StageNova.Forms
             chkIsActive = new CheckBox();
             grpPerformances = new GroupBox();
             dgvPerformances = new DataGridView();
-            btnAddPerformance = new Button();
-            dtpPerformanceDate = new DateTimePicker();
-            nudTotalSeats = new NumericUpDown();
             lblPerfDate = new Label();
+            dtpPerformanceDate = new DateTimePicker();
             lblPerfSeats = new Label();
+            nudTotalSeats = new NumericUpDown();
+            btnAddPerformance = new Button();
             roundPictureBox1 = new StageNova.Utilities.RoundPictureBox();
             menu = new MenuStrip();
             Home = new ToolStripMenuItem();
@@ -66,64 +65,86 @@ namespace StageNova.Forms
             manageVehicles = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numYear).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)nudTotalSeats).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgvPerformances).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)roundPictureBox1).BeginInit();
             grpPerformances.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvPerformances).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudTotalSeats).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)roundPictureBox1).BeginInit();
             menu.SuspendLayout();
             SuspendLayout();
             // 
-            // label6
+            // btnBack
             // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.Transparent;
-            label6.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(355, 49);
-            label6.Name = "label6";
-            label6.Size = new Size(265, 38);
-            label6.TabIndex = 46;
-            label6.Text = "Add or Edit Play";
+            btnBack.BackColor = Color.DarkOrange;
+            btnBack.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            btnBack.ForeColor = SystemColors.ControlText;
+            btnBack.Location = new Point(200, 540);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(100, 40);
+            btnBack.TabIndex = 41;
+            btnBack.Text = "<- Back";
+            btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += btnBack_Click;
             // 
-            // label1 - Title
+            // btnSave
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(50, 100);
-            label1.Name = "label1";
-            label1.Size = new Size(49, 25);
-            label1.TabIndex = 28;
-            label1.Text = "Title:";
+            btnSave.BackColor = Color.FromArgb(39, 174, 96);
+            btnSave.FlatAppearance.BorderSize = 0;
+            btnSave.FlatStyle = FlatStyle.Flat;
+            btnSave.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            btnSave.ForeColor = Color.White;
+            btnSave.Location = new Point(50, 540);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(130, 40);
+            btnSave.TabIndex = 39;
+            btnSave.Text = "Save Play";
+            btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += btnSave_Click;
             // 
-            // txtMake - Title input
+            // pictureBox1
             // 
-            txtMake.Location = new Point(50, 128);
-            txtMake.Name = "txtMake";
-            txtMake.Size = new Size(200, 27);
-            txtMake.TabIndex = 29;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox1.Location = new Point(300, 100);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(160, 160);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 37;
+            pictureBox1.TabStop = false;
             // 
-            // label3 - Director
+            // pbImage
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(50, 165);
-            label3.Name = "label3";
-            label3.Size = new Size(80, 25);
-            label3.TabIndex = 30;
-            label3.Text = "Director:";
+            pbImage.BackColor = SystemColors.ActiveBorder;
+            pbImage.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            pbImage.ImeMode = ImeMode.NoControl;
+            pbImage.Location = new Point(300, 268);
+            pbImage.Name = "pbImage";
+            pbImage.Size = new Size(160, 30);
+            pbImage.TabIndex = 36;
+            pbImage.Text = "Upload Poster";
+            pbImage.UseVisualStyleBackColor = false;
+            pbImage.Click += PbImage_Click;
             // 
-            // txtModel - Director input
+            // txtDescription
             // 
-            txtModel.Location = new Point(50, 193);
-            txtModel.Name = "txtModel";
-            txtModel.Size = new Size(200, 27);
-            txtModel.TabIndex = 42;
+            txtDescription.Location = new Point(50, 456);
+            txtDescription.Multiline = true;
+            txtDescription.Name = "txtDescription";
+            txtDescription.Size = new Size(300, 70);
+            txtDescription.TabIndex = 35;
             // 
-            // label4 - Genre
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(50, 428);
+            label5.Name = "label5";
+            label5.Size = new Size(115, 25);
+            label5.TabIndex = 34;
+            label5.Text = "Description:";
+            // 
+            // label4
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
@@ -131,11 +152,49 @@ namespace StageNova.Forms
             label4.ForeColor = Color.White;
             label4.Location = new Point(50, 230);
             label4.Name = "label4";
-            label4.Size = new Size(61, 25);
+            label4.Size = new Size(68, 25);
             label4.TabIndex = 32;
             label4.Text = "Genre:";
             // 
-            // cmbType - Genre dropdown
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(50, 165);
+            label3.Name = "label3";
+            label3.Size = new Size(88, 25);
+            label3.TabIndex = 30;
+            label3.Text = "Director:";
+            // 
+            // txtMake
+            // 
+            txtMake.Location = new Point(50, 128);
+            txtMake.Name = "txtMake";
+            txtMake.Size = new Size(200, 27);
+            txtMake.TabIndex = 29;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(50, 100);
+            label1.Name = "label1";
+            label1.Size = new Size(54, 25);
+            label1.TabIndex = 28;
+            label1.Text = "Title:";
+            // 
+            // txtModel
+            // 
+            txtModel.Location = new Point(50, 193);
+            txtModel.Name = "txtModel";
+            txtModel.Size = new Size(200, 27);
+            txtModel.TabIndex = 42;
+            // 
+            // cmbType
             // 
             cmbType.FormattingEnabled = true;
             cmbType.Items.AddRange(new object[] { "Drama", "Comedy", "Tragedy", "Musical", "Opera", "Ballet", "Thriller", "Historical", "Experimental", "Children" });
@@ -144,19 +203,7 @@ namespace StageNova.Forms
             cmbType.Size = new Size(200, 28);
             cmbType.TabIndex = 43;
             // 
-            // label2 - Duration
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(50, 296);
-            label2.Name = "label2";
-            label2.Size = new Size(146, 25);
-            label2.TabIndex = 45;
-            label2.Text = "Duration (min):";
-            // 
-            // numYear - Duration input
+            // numYear
             // 
             numYear.Location = new Point(50, 324);
             numYear.Maximum = new decimal(new int[] { 600, 0, 0, 0 });
@@ -166,7 +213,31 @@ namespace StageNova.Forms
             numYear.TabIndex = 44;
             numYear.Value = new decimal(new int[] { 90, 0, 0, 0 });
             // 
-            // lblPrice - Ticket Price
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(50, 296);
+            label2.Name = "label2";
+            label2.Size = new Size(143, 25);
+            label2.TabIndex = 45;
+            label2.Text = "Duration (min):";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
+            label6.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(355, 49);
+            label6.Name = "label6";
+            label6.Size = new Size(229, 38);
+            label6.TabIndex = 46;
+            label6.Text = "Add or Edit Play";
+            // 
+            // lblPrice
             // 
             lblPrice.AutoSize = true;
             lblPrice.BackColor = Color.Transparent;
@@ -174,7 +245,7 @@ namespace StageNova.Forms
             lblPrice.ForeColor = Color.White;
             lblPrice.Location = new Point(50, 362);
             lblPrice.Name = "lblPrice";
-            lblPrice.Size = new Size(141, 25);
+            lblPrice.Size = new Size(171, 25);
             lblPrice.TabIndex = 60;
             lblPrice.Text = "Ticket Price (BGN):";
             // 
@@ -201,50 +272,6 @@ namespace StageNova.Forms
             chkIsActive.Text = "Active";
             chkIsActive.UseVisualStyleBackColor = false;
             // 
-            // label5 - Description
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(50, 428);
-            label5.Name = "label5";
-            label5.Size = new Size(107, 25);
-            label5.TabIndex = 34;
-            label5.Text = "Description:";
-            // 
-            // txtDescription
-            // 
-            txtDescription.Location = new Point(50, 456);
-            txtDescription.Multiline = true;
-            txtDescription.Name = "txtDescription";
-            txtDescription.Size = new Size(300, 70);
-            txtDescription.TabIndex = 35;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
-            pictureBox1.Location = new Point(300, 100);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(160, 160);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 37;
-            pictureBox1.TabStop = false;
-            // 
-            // pbImage
-            // 
-            pbImage.BackColor = SystemColors.ActiveBorder;
-            pbImage.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            pbImage.ImeMode = ImeMode.NoControl;
-            pbImage.Location = new Point(300, 268);
-            pbImage.Name = "pbImage";
-            pbImage.Size = new Size(160, 30);
-            pbImage.TabIndex = 36;
-            pbImage.Text = "Upload Poster";
-            pbImage.UseVisualStyleBackColor = false;
-            pbImage.Click += PbImage_Click;
-            // 
             // grpPerformances
             // 
             grpPerformances.BackColor = Color.FromArgb(40, 40, 60);
@@ -263,58 +290,6 @@ namespace StageNova.Forms
             grpPerformances.TabStop = false;
             grpPerformances.Text = "Show Dates (Performances)";
             // 
-            // lblPerfDate
-            // 
-            lblPerfDate.AutoSize = true;
-            lblPerfDate.Font = new Font("Segoe UI", 10F);
-            lblPerfDate.Location = new Point(10, 35);
-            lblPerfDate.Name = "lblPerfDate";
-            lblPerfDate.Size = new Size(46, 23);
-            lblPerfDate.Text = "Date:";
-            // 
-            // dtpPerformanceDate
-            // 
-            dtpPerformanceDate.Format = DateTimePickerFormat.Custom;
-            dtpPerformanceDate.CustomFormat = "dd MMM yyyy  HH:mm";
-            dtpPerformanceDate.Location = new Point(60, 33);
-            dtpPerformanceDate.Name = "dtpPerformanceDate";
-            dtpPerformanceDate.Size = new Size(210, 27);
-            dtpPerformanceDate.TabIndex = 63;
-            // 
-            // lblPerfSeats
-            // 
-            lblPerfSeats.AutoSize = true;
-            lblPerfSeats.Font = new Font("Segoe UI", 10F);
-            lblPerfSeats.Location = new Point(280, 35);
-            lblPerfSeats.Name = "lblPerfSeats";
-            lblPerfSeats.Size = new Size(52, 23);
-            lblPerfSeats.Text = "Seats:";
-            // 
-            // nudTotalSeats
-            // 
-            nudTotalSeats.Location = new Point(338, 33);
-            nudTotalSeats.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
-            nudTotalSeats.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            nudTotalSeats.Name = "nudTotalSeats";
-            nudTotalSeats.Size = new Size(60, 27);
-            nudTotalSeats.TabIndex = 64;
-            nudTotalSeats.Value = new decimal(new int[] { 100, 0, 0, 0 });
-            // 
-            // btnAddPerformance
-            // 
-            btnAddPerformance.BackColor = Color.FromArgb(39, 174, 96);
-            btnAddPerformance.FlatStyle = FlatStyle.Flat;
-            btnAddPerformance.FlatAppearance.BorderSize = 0;
-            btnAddPerformance.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            btnAddPerformance.ForeColor = Color.White;
-            btnAddPerformance.Location = new Point(405, 30);
-            btnAddPerformance.Name = "btnAddPerformance";
-            btnAddPerformance.Size = new Size(45, 30);
-            btnAddPerformance.TabIndex = 65;
-            btnAddPerformance.Text = "+";
-            btnAddPerformance.UseVisualStyleBackColor = false;
-            btnAddPerformance.Click += btnAddPerformance_Click;
-            // 
             // dgvPerformances
             // 
             dgvPerformances.AllowUserToAddRows = false;
@@ -329,33 +304,59 @@ namespace StageNova.Forms
             dgvPerformances.Size = new Size(440, 360);
             dgvPerformances.TabIndex = 66;
             // 
-            // btnSave
+            // lblPerfDate
             // 
-            btnSave.BackColor = Color.FromArgb(39, 174, 96);
-            btnSave.FlatStyle = FlatStyle.Flat;
-            btnSave.FlatAppearance.BorderSize = 0;
-            btnSave.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
-            btnSave.ForeColor = Color.White;
-            btnSave.Location = new Point(50, 540);
-            btnSave.Name = "btnSave";
-            btnSave.Size = new Size(130, 40);
-            btnSave.TabIndex = 39;
-            btnSave.Text = "Save Play";
-            btnSave.UseVisualStyleBackColor = false;
-            btnSave.Click += btnSave_Click;
+            lblPerfDate.AutoSize = true;
+            lblPerfDate.Font = new Font("Segoe UI", 10F);
+            lblPerfDate.Location = new Point(10, 35);
+            lblPerfDate.Name = "lblPerfDate";
+            lblPerfDate.Size = new Size(50, 23);
+            lblPerfDate.TabIndex = 67;
+            lblPerfDate.Text = "Date:";
             // 
-            // btnBack
+            // dtpPerformanceDate
             // 
-            btnBack.BackColor = Color.DarkOrange;
-            btnBack.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
-            btnBack.ForeColor = SystemColors.ControlText;
-            btnBack.Location = new Point(200, 540);
-            btnBack.Name = "btnBack";
-            btnBack.Size = new Size(100, 40);
-            btnBack.TabIndex = 41;
-            btnBack.Text = "<- Back";
-            btnBack.UseVisualStyleBackColor = false;
-            btnBack.Click += btnBack_Click;
+            dtpPerformanceDate.CustomFormat = "dd MMM yyyy  HH:mm";
+            dtpPerformanceDate.Format = DateTimePickerFormat.Custom;
+            dtpPerformanceDate.Location = new Point(60, 33);
+            dtpPerformanceDate.Name = "dtpPerformanceDate";
+            dtpPerformanceDate.Size = new Size(210, 32);
+            dtpPerformanceDate.TabIndex = 63;
+            // 
+            // lblPerfSeats
+            // 
+            lblPerfSeats.AutoSize = true;
+            lblPerfSeats.Font = new Font("Segoe UI", 10F);
+            lblPerfSeats.Location = new Point(280, 35);
+            lblPerfSeats.Name = "lblPerfSeats";
+            lblPerfSeats.Size = new Size(54, 23);
+            lblPerfSeats.TabIndex = 68;
+            lblPerfSeats.Text = "Seats:";
+            // 
+            // nudTotalSeats
+            // 
+            nudTotalSeats.Location = new Point(338, 33);
+            nudTotalSeats.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            nudTotalSeats.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            nudTotalSeats.Name = "nudTotalSeats";
+            nudTotalSeats.Size = new Size(60, 32);
+            nudTotalSeats.TabIndex = 64;
+            nudTotalSeats.Value = new decimal(new int[] { 100, 0, 0, 0 });
+            // 
+            // btnAddPerformance
+            // 
+            btnAddPerformance.BackColor = Color.FromArgb(39, 174, 96);
+            btnAddPerformance.FlatAppearance.BorderSize = 0;
+            btnAddPerformance.FlatStyle = FlatStyle.Flat;
+            btnAddPerformance.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnAddPerformance.ForeColor = Color.White;
+            btnAddPerformance.Location = new Point(405, 30);
+            btnAddPerformance.Name = "btnAddPerformance";
+            btnAddPerformance.Size = new Size(45, 30);
+            btnAddPerformance.TabIndex = 65;
+            btnAddPerformance.Text = "+";
+            btnAddPerformance.UseVisualStyleBackColor = false;
+            btnAddPerformance.Click += btnAddPerformance_Click;
             // 
             // roundPictureBox1
             // 
@@ -386,7 +387,7 @@ namespace StageNova.Forms
             // 
             Home.ForeColor = Color.FromArgb(225, 200, 160);
             Home.Name = "Home";
-            Home.Size = new Size(91, 34);
+            Home.Size = new Size(80, 34);
             Home.Text = "Home";
             Home.Click += menu_ItemClicked;
             // 
@@ -395,7 +396,7 @@ namespace StageNova.Forms
             Vehicles.ForeColor = Color.FromArgb(225, 200, 160);
             Vehicles.Name = "Vehicles";
             Vehicles.Padding = new Padding(4, 0, 4, 5);
-            Vehicles.Size = new Size(117, 34);
+            Vehicles.Size = new Size(119, 34);
             Vehicles.Text = "Repertoire";
             Vehicles.Click += menu_ItemClicked;
             // 
@@ -404,7 +405,7 @@ namespace StageNova.Forms
             Store.ForeColor = Color.FromArgb(225, 200, 160);
             Store.Name = "Store";
             Store.Padding = new Padding(4, 0, 4, 5);
-            Store.Size = new Size(84, 34);
+            Store.Size = new Size(137, 34);
             Store.Text = "Merchandise";
             Store.Click += menu_ItemClicked;
             // 
@@ -413,7 +414,7 @@ namespace StageNova.Forms
             MyReservations.ForeColor = Color.FromArgb(225, 200, 160);
             MyReservations.Name = "MyReservations";
             MyReservations.Padding = new Padding(4, 0, 4, 5);
-            MyReservations.Size = new Size(136, 34);
+            MyReservations.Size = new Size(141, 34);
             MyReservations.Text = "My Bookings";
             MyReservations.Click += menu_ItemClicked;
             // 
@@ -422,7 +423,7 @@ namespace StageNova.Forms
             Users.ForeColor = Color.FromArgb(225, 200, 160);
             Users.Name = "Users";
             Users.Padding = new Padding(4, 0, 4, 5);
-            Users.Size = new Size(87, 34);
+            Users.Size = new Size(72, 34);
             Users.Text = "Users";
             Users.Visible = false;
             Users.Click += menu_ItemClicked;
@@ -432,7 +433,7 @@ namespace StageNova.Forms
             Management.DropDownItems.AddRange(new ToolStripItem[] { manageProducts, manageVehicles });
             Management.ForeColor = Color.FromArgb(225, 200, 160);
             Management.Name = "Management";
-            Management.Size = new Size(169, 34);
+            Management.Size = new Size(144, 34);
             Management.Text = "Management";
             Management.Visible = false;
             // 
@@ -441,7 +442,7 @@ namespace StageNova.Forms
             manageProducts.BackColor = Color.FromArgb(30, 15, 30);
             manageProducts.ForeColor = Color.FromArgb(225, 200, 160);
             manageProducts.Name = "manageProducts";
-            manageProducts.Size = new Size(198, 30);
+            manageProducts.Size = new Size(211, 30);
             manageProducts.Text = "Merchandise";
             manageProducts.Click += menu_ItemClicked;
             // 
@@ -450,7 +451,7 @@ namespace StageNova.Forms
             manageVehicles.BackColor = Color.FromArgb(30, 15, 30);
             manageVehicles.ForeColor = Color.FromArgb(225, 200, 160);
             manageVehicles.Name = "manageVehicles";
-            manageVehicles.Size = new Size(198, 30);
+            manageVehicles.Size = new Size(211, 30);
             manageVehicles.Text = "Plays";
             manageVehicles.Click += menu_ItemClicked;
             // 
@@ -490,11 +491,11 @@ namespace StageNova.Forms
             Load += AddEditPlay_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)numYear).EndInit();
-            ((System.ComponentModel.ISupportInitialize)nudTotalSeats).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgvPerformances).EndInit();
-            ((System.ComponentModel.ISupportInitialize)roundPictureBox1).EndInit();
             grpPerformances.ResumeLayout(false);
             grpPerformances.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvPerformances).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudTotalSeats).EndInit();
+            ((System.ComponentModel.ISupportInitialize)roundPictureBox1).EndInit();
             menu.ResumeLayout(false);
             menu.PerformLayout();
             ResumeLayout(false);

@@ -172,7 +172,7 @@
             pictureBox1.Location = new Point(700, 73);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(250, 300);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 28;
             pictureBox1.TabStop = false;
             // 
@@ -232,7 +232,7 @@
             MyReservations.ForeColor = Color.FromArgb(225, 200, 160);
             MyReservations.Name = "MyReservations";
             MyReservations.Padding = new Padding(4, 0, 4, 5);
-            MyReservations.Size = new Size(166, 34);
+            MyReservations.Size = new Size(141, 34);
             MyReservations.Text = "My Bookings";
             MyReservations.Click += menu_ItemClicked;
             // 
@@ -241,7 +241,7 @@
             Users.ForeColor = Color.FromArgb(225, 200, 160);
             Users.Name = "Users";
             Users.Padding = new Padding(4, 0, 4, 5);
-            Users.Size = new Size(87, 34);
+            Users.Size = new Size(72, 34);
             Users.Text = "Users";
             Users.Visible = false;
             Users.Click += menu_ItemClicked;
@@ -251,7 +251,7 @@
             Management.DropDownItems.AddRange(new ToolStripItem[] { manageProducts, manageVehicles });
             Management.ForeColor = Color.FromArgb(225, 200, 160);
             Management.Name = "Management";
-            Management.Size = new Size(169, 34);
+            Management.Size = new Size(144, 34);
             Management.Text = "Management";
             Management.Visible = false;
             // 
@@ -260,7 +260,7 @@
             manageProducts.BackColor = Color.FromArgb(30, 15, 30);
             manageProducts.ForeColor = Color.FromArgb(225, 200, 160);
             manageProducts.Name = "manageProducts";
-            manageProducts.Size = new Size(239, 30);
+            manageProducts.Size = new Size(211, 30);
             manageProducts.Text = "Merchandise";
             manageProducts.Click += menu_ItemClicked;
             // 
@@ -269,7 +269,7 @@
             manageVehicles.BackColor = Color.FromArgb(30, 15, 30);
             manageVehicles.ForeColor = Color.FromArgb(225, 200, 160);
             manageVehicles.Name = "manageVehicles";
-            manageVehicles.Size = new Size(239, 30);
+            manageVehicles.Size = new Size(211, 30);
             manageVehicles.Text = "Plays";
             manageVehicles.Click += menu_ItemClicked;
             // 
